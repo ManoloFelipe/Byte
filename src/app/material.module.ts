@@ -16,6 +16,7 @@ import {
     MatProgressSpinnerModule,
     MatStepperModule,
     MatCheckboxModule,
+    MatSidenavModule
 
 } from '@angular/material'
 
@@ -36,6 +37,8 @@ import {
         MatProgressSpinnerModule,
         MatStepperModule,
         MatCheckboxModule,
+        MatSidenavModule,
+        
      
     ],
     exports:[
@@ -54,6 +57,7 @@ import {
         MatProgressSpinnerModule,
         MatStepperModule,
         MatCheckboxModule,
+        MatSidenavModule
         
     ]
 })
