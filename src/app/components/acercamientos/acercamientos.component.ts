@@ -30,13 +30,14 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class AcercamientosComponent implements OnInit {
 
+
   animal: string;
   names: string;
 
   constructor(public dialog: MatDialog) {}
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
+    const dialogRef = this.dialog.open(CrearAcercamiento, {
       width: '300px',      
       data: {names: this.names, animal: this.animal}
     });
@@ -77,7 +78,11 @@ export class AcercamientosComponent implements OnInit {
     return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.position + 1}`;
   }
 
-} 
+  myFunciton(): void{
+
+  }
+
+}
 //----------------------------------------- COMPONENTE DEL DIALOG --------------------------------------- 
 
 export interface DialogData {
@@ -90,10 +95,10 @@ export interface DialogData {
   templateUrl: 'agregar-acercamientos.component.html',
   styleUrls: ['./acercamientos.component.css']
 })
-export class DialogOverviewExampleDialog {
+export class CrearAcercamiento {
 
   constructor(
-    public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
+    public dialogRef: MatDialogRef<CrearAcercamiento>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
 
   onNoClick(): void {
@@ -101,3 +106,4 @@ export class DialogOverviewExampleDialog {
   }
 
 }
+

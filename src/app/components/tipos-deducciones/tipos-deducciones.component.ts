@@ -36,7 +36,7 @@ export class TiposDeduccionesComponent implements OnInit {
   constructor(public dialog: MatDialog) {}
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
+    const dialogRef = this.dialog.open(CrearTiposDeducciones, {
       width: '300px',      
       data: {names: this.names, animal: this.animal}
     });
@@ -90,10 +90,10 @@ export interface DialogData {
   templateUrl: 'agregar-tipos-deducciones.component.html',
   styleUrls: ['./tipos-deducciones.component.css']
 })
-export class DialogOverviewExampleDialog {
+export class CrearTiposDeducciones {
 
   constructor(
-    public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
+    public dialogRef: MatDialogRef<CrearTiposDeducciones>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
 
   onNoClick(): void {

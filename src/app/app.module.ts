@@ -12,9 +12,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { UbicacionGarantiaComponent } from './components/ubicacion-garantia/ubicacion-garantia.component';
 import { CategoriasSIBComponent } from './components/categorias-sib/categorias-sib.component';
-import { AcercamientosComponent } from './components/acercamientos/acercamientos.component';
-import { AsesoresPrestamoComponent } from './components/asesores-prestamo/asesores-prestamo.component';
-import { TiposDeduccionesComponent } from './components/tipos-deducciones/tipos-deducciones.component';
+import { AcercamientosComponent, CrearAcercamiento } from './components/acercamientos/acercamientos.component';
+import { AsesoresPrestamoComponent, CrearAsesoresPrestamos } from './components/asesores-prestamo/asesores-prestamo.component';
+import { TiposDeduccionesComponent, CrearTiposDeducciones } from './components/tipos-deducciones/tipos-deducciones.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +23,10 @@ import { TiposDeduccionesComponent } from './components/tipos-deducciones/tipos-
     CategoriasSIBComponent,
     AcercamientosComponent,
     AsesoresPrestamoComponent,
-    TiposDeduccionesComponent
+    TiposDeduccionesComponent,
+    CrearAcercamiento,
+    CrearAsesoresPrestamos,
+    CrearTiposDeducciones
   ],
   imports: [
     BrowserModule,
@@ -31,6 +34,10 @@ import { TiposDeduccionesComponent } from './components/tipos-deducciones/tipos-
     MetarialModule,
     AppRoutingModule
   ],
+  entryComponents: [
+    CrearAcercamiento, 
+    CrearAsesoresPrestamos, 
+    CrearTiposDeducciones],
   providers: [],
   bootstrap: [AppComponent]
 })

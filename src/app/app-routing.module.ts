@@ -12,7 +12,7 @@ const routes: Routes = [
   {path: 'ubicacionGarantia', component: UbicacionGarantiaComponent},
   {path: 'categoriasSIB', component: CategoriasSIBComponent},
   {path: 'acercamientos', component: AcercamientosComponent},
-  {path: 'asesoresPrestamo', component: AsesoresPrestamoComponent},
+  {path: 'asesoresPrestamos', component: AsesoresPrestamoComponent},
   {path: 'tiposDeducciones', component: TiposDeduccionesComponent},
   {path: '**', component: HomeComponent}
 ];
