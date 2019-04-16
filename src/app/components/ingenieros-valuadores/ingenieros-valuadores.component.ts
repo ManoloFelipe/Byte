@@ -36,7 +36,7 @@ export class IngenierosValuadoresComponent implements OnInit {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DailogAgregarIngenierosValuadores, {
-      width: '250px',
+      width: '500px',
       data: {codigo: this.codigo, nombre: this.nombre, registro: this.registro}
     });
 

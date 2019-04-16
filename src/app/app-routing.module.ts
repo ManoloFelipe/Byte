@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-//--------------------COMPONENTES
+
 import { UbicacionGarantiaComponent } from './components/ubicacion-garantia/ubicacion-garantia.component';
 import { HomeComponent } from './components/home/home.component';
 import { CategoriasSIBComponent } from './components/categorias-sib/categorias-sib.component';
@@ -31,7 +31,7 @@ import { MotivosReservasComponent } from './components/motivos-reservas/motivos-
 import { NotariosComponent } from './components/notarios/notarios.component';
 import { ParametrizacionNumeroPrestamoComponent } from './components/parametrizacion-numero-prestamo/parametrizacion-numero-prestamo.component';
 import { PasosCierreComponent } from './components/pasos-cierre/pasos-cierre.component';
-import { ReslacionTransaccionDepositosComponent } from './components/relacion-transaccion-depositos/relacion-transaccion-depositos.component';
+import { RelacionTransaccionDepositosComponent } from './components/relacion-transaccion-depositos/relacion-transaccion-depositos.component';
 import { TiposCanalesDistribucionComponent } from './components/tipos-canales-distribucion/tipos-canales-distribucion.component';
 import { TiposDeduccionesComponent } from './components/tipos-deducciones/tipos-deducciones.component';
 import { TiposPrestamosComponent } from './components/tipos-prestamos/tipos-prestamos.component';
@@ -39,55 +39,56 @@ import { TiposTransaccionesComponent } from './components/tipos-transacciones/ti
 import { OrigenFondosComponent } from './components/origen-fondos/origen-fondos.component';
 import { MediosContactoComponent } from './components/medios-contacto/medios-contacto.component';
 
-
-//--------------------------RUTAS
 const routes: Routes = [
   {path: '', component: HomeComponent},
-//1-4
-  {path: 'almacenadora', component: AlmacenadoraComponent},
-  {path: 'aseguradora', component: AseguradorasComponent},
-  {path: 'agrupacionCredito', component: AgrupacionCreditosComponent},
-  {path: 'lugaresInversion', component: LugaresInversionComponent},
-//5-8
-  {path: 'ubicacionGarantia', component: UbicacionGarantiaComponent},
-  {path: 'origenFondos', component: OrigenFondosComponent},
-  {path: 'formasPago', component: FormasPagoComponent},
-  {path: 'destinos', component: DestinosComponent},
-//9-12
-  {path: 'categoriasSIB', component: CategoriasSIBComponent},
-  {path: 'estatusGarantiaReal', component: EstatusGarantiaRealComponent},
-  {path: 'estatusAvaluos', component: EstatusAvaluosComponent},
-  {path: 'ingenierosValuadores', component: IngenierosValuadoresComponent},
-//13-16
-  {path: 'notarios', component: NotariosComponent},
-  {path: 'motivosAjuste', component: MotivosAjustesComponent},
-  {path: 'diasInhabilies', component: DiasInhabilesComponent},
-  {path: 'cobrosAdicionales', component: CobrosAdicionalesComponent},
-//17-20
-  {path: 'institucionesCobroAdicional', component: InstitucionesCobrosAdicionalesComponent},
-  {path: 'motivosReserva', component: MotivosReservasComponent},
-  {path: 'formasDesembolso', component: FormasDesembolsoComponent},
-  {path: 'motivosReferenciaCliente', component: MotivosReferenciasClientesComponent},
-//21-24
-  {path: 'relacionTransaccionDeposito', component: ReslacionTransaccionDepositosComponent},
-  {path: 'mediosContacto', component: MediosContactoComponent},
-  {path: 'canalesVenta', component: CanalesVentaComponent},
-  {path: 'tiposCanalesDistribucion', component: TiposCanalesDistribucionComponent},
-//25-58
-  {path: 'acercamiento', component: AcercamientosComponent},
-  {path: 'asesoresPrestamos', component: AsesoresPrestamoComponent},
-  {path: 'bancos', component: BancosComponent},
-  {path: 'tiposDeducciones', component: TiposDeduccionesComponent},
-//----------------------------------------------------------------------------------------------------
-  {path: 'tiposPresatmos', component: TiposPrestamosComponent},
-  {path: 'archivosLimpieza', component: ArchivosLimpiezaComponent},
-  {path: 'frecuenciasAmortizacion', component: FrecuenciasAmortizacionComponent},
-  {path: 'garantiasContables', component: GarantiasContablesComponent},
-  {path: 'Home', component: HomeComponent},  
-  {path: 'parametrizacionNumeroPrestamo', component: ParametrizacionNumeroPrestamoComponent},
-  {path: 'pasosCierre', component: PasosCierreComponent},  
-  {path: 'tiposTransacciones', component: TiposTransaccionesComponent},
-  {path: '**', component: HomeComponent}
+  //1-4
+    {path: 'almacenadora', component: AlmacenadoraComponent},
+    {path: 'aseguradora', component: AseguradorasComponent},
+    {path: 'agrupacionCredito', component: AgrupacionCreditosComponent},
+    {path: 'lugaresInversion', component: LugaresInversionComponent},
+  //5-8
+    {path: 'ubicacionGarantia', component: UbicacionGarantiaComponent},
+    {path: 'origenFondos', component: OrigenFondosComponent},
+    {path: 'formasPago', component: FormasPagoComponent},
+    {path: 'destinos', component: DestinosComponent},
+  //9-12
+    {path: 'categoriasSIB', component: CategoriasSIBComponent},
+    {path: 'estatusGarantiaReal', component: EstatusGarantiaRealComponent},
+    {path: 'estatusAvaluos', component: EstatusAvaluosComponent},
+    {path: 'ingenierosValuadores', component: IngenierosValuadoresComponent},
+  //13-16
+    {path: 'notarios', component: NotariosComponent},
+    {path: 'motivosAjuste', component: MotivosAjustesComponent},
+    {path: 'diasInhabilies', component: DiasInhabilesComponent},
+    {path: 'cobrosAdicionales', component: CobrosAdicionalesComponent},
+  //17-20
+    {path: 'institucionesCobroAdicional', component: InstitucionesCobrosAdicionalesComponent},
+    {path: 'motivosReserva', component: MotivosReservasComponent},
+    {path: 'formasDesembolso', component: FormasDesembolsoComponent},
+    {path: 'motivosReferenciaCliente', component: MotivosReferenciasClientesComponent},
+  //21-24
+    {path: 'relacionTransaccionDeposito', component: RelacionTransaccionDepositosComponent},
+    {path: 'mediosContacto', component: MediosContactoComponent},
+    {path: 'canalesVenta', component: CanalesVentaComponent},
+    {path: 'tiposCanalesDistribucion', component: TiposCanalesDistribucionComponent},
+  //25-58
+    {path: 'acercamiento', component: AcercamientosComponent},
+    {path: 'asesoresPrestamos', component: AsesoresPrestamoComponent},
+    {path: 'bancos', component: BancosComponent},
+    {path: 'tiposDeducciones', component: TiposDeduccionesComponent},
+  //----------------------------------------------------------------------------------------------------
+    {path: 'tiposPresatmos', component: TiposPrestamosComponent},
+    {path: 'archivosLimpieza', component: ArchivosLimpiezaComponent},
+    {path: 'frecuenciasAmortizacion', component: FrecuenciasAmortizacionComponent},
+    {path: 'garantiasContables', component: GarantiasContablesComponent},
+    {path: 'Home', component: HomeComponent},  
+    {path: 'parametrizacionNumeroPrestamo', component: ParametrizacionNumeroPrestamoComponent},
+    {path: 'pasosCierre', component: PasosCierreComponent},  
+    {path: 'tiposTransacciones', component: TiposTransaccionesComponent},
+    
+  
+    {path: '**', component: HomeComponent}
+
 ];
 
 @NgModule({

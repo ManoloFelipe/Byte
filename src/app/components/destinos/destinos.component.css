@@ -1,0 +1,46 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+
+  #agregar{
+      width: 200px;
+      height: 200px;
+      padding-left: 42%;
+  }
+
+  #guardar{
+      text-align: center;
+      margin-left: 50%;
+  }
+
+  #table{
+    text-align: center;
+    width: 500px;
+    height: 500px;
+  }
+
+  #table table{
+    margin-left:84%;
+  }
+
+  #iconos2 p {
+    text-align: center;
+  }
+
+  #iconos2{
+    float: center;
+  }
+
+  #iconos{
+    float: right;
+  }
+
+  mat-card mat-card-title{
+    text-align: center;
+  }
+
+  table{
+    width: 100%;
+  }

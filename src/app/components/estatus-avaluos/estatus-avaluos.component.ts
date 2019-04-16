@@ -33,7 +33,7 @@ export class EstatusAvaluosComponent implements OnInit {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DailogAgregarEstatusAvaluos, {
-      width: '250px',
+      width: '500px',
       data: {codigo: this.codigo, descripcion: this.descripcion}
     });
 

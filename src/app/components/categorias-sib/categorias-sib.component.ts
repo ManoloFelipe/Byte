@@ -34,7 +34,7 @@ export class CategoriasSIBComponent implements OnInit {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DailogAgregarCategoriaSIB, {
-      width: '250px',
+      width: '500px',
       data: {codigo: this.codigo, descripcion: this.descripcion}
     });
 

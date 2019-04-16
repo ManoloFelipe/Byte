@@ -36,7 +36,7 @@ export class EstatusGarantiaRealComponent implements OnInit {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DailogAgregarEstatusGarantiaReal, {
-      width: '250px',
+      width: '500px',
       data: {estatus: this.estatus, descripcion: this.descripcion}
     });
 

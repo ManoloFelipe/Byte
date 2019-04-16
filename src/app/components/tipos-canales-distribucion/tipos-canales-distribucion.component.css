@@ -1,0 +1,134 @@
+#arriba{
+    background: red;
+    border-radius: 5px;
+    color: white;
+}
+
+#Titulo{
+text-align: center;
+
+}
+
+#Descr{
+    margin-left: 580px;
+    margin-top: -20px;
+}
+
+#inputs{
+    margin-left: 300px;
+}
+
+#i2{
+    margin-left: 700px;
+    margin-top: 1000
+}
+
+#a1{
+    width: 1000px;
+}
+
+#p1{
+    width: 300px;
+    margin-left: 120px;
+   
+  
+}
+#p2{
+    width: 250px;
+    margin-left: 40px;
+    
+}
+  hr{
+      margin-top: 100px;
+  }
+
+  #atras{
+      width: 40px;
+      height: 40px;
+      margin-left: 20px;
+      margin-top: 3px;
+  }
+
+
+  table {
+    width: 600px;
+    height: 10px;
+    margin-left: 400px;
+  }
+  
+  th.mat-sort-header-sorted {
+    color: red;
+  }
+
+  #edit{
+      margin-left: 300px;
+      
+  }
+
+  #delete{
+    margin-left: 20px;
+}
+
+
+#iconos1{
+    margin-left: -120px;
+}
+#iconos2{
+    margin-left: 500px;
+    margin-top: -6px;
+}
+
+#back,#door,#arrow,#arrow_left,#add,#table1,#table2{
+    margin-left: 10px;
+    color: #2C3E50  ;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 200px;
+    margin-left: 540px;
+  }
+  table {
+    width: 400px;
+    height: 10px;
+    margin-left: 400px;
+  }
+  
+
+
+  
+  .example2 {
+    width: 200px;
+    margin-left: 100px;
+    margin-top: -50px;
+  }
+
+  #example3 {
+    width: 50px;
+    margin-left: 20px;
+    margin-top: -50px;
+  }
+  #producto{
+    margin-left: 10px;
+    margin-top: -150px;
+  }
+  #producto1{
+    margin-left: 20px;
+  }
+
+  
+
+  #Check1{
+    width: 20px;
+    margin-left: 30px;
+  }
+
+
+  
+
+
