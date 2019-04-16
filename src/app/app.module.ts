@@ -45,6 +45,8 @@ import { TiposPrestamosComponent } from './components/tipos-prestamos/tipos-pres
 import { TiposTransaccionesComponent } from './components/tipos-transacciones/tipos-transacciones.component';
 import { OrigenFondosComponent, DialogOrigen } from './components/origen-fondos/origen-fondos.component';
 import { MediosContactoComponent, DialogContacto } from './components/medios-contacto/medios-contacto.component';
+import { MontosPlazoComponent, DailogAgregarMontosPlazo, DailogEditarMontosPlazo } from './components/montos-plazo/montos-plazo.component';
+
 
 @NgModule({
   declarations: [
@@ -85,6 +87,7 @@ import { MediosContactoComponent, DialogContacto } from './components/medios-con
     ParametrizacionNumeroPrestamoComponent,
     PasosCierreComponent,
     TiposTransaccionesComponent,
+    MontosPlazoComponent,
     DailogAgregarEstatusGarantiaReal,
     DailogAgregarCategoriaSIB,
     DailogAgregarEstatusAvaluos,
@@ -103,7 +106,9 @@ import { MediosContactoComponent, DialogContacto } from './components/medios-con
     DialogTiposC,
     CrearTiposDeducciones,
     DialogOrigen,
-    DialogContacto
+    DialogContacto,
+    DailogAgregarMontosPlazo,
+    DailogEditarMontosPlazo
   ],
   imports: [
     BrowserModule,
@@ -130,7 +135,9 @@ import { MediosContactoComponent, DialogContacto } from './components/medios-con
     DialogTiposC,
     CrearTiposDeducciones,
     DialogOrigen,
-    DialogContacto
+    DialogContacto,
+    DailogAgregarMontosPlazo,
+    DailogEditarMontosPlazo
   ],
   providers: [],
   bootstrap: [AppComponent]

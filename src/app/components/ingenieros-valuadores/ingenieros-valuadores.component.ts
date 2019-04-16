@@ -14,6 +14,7 @@ export interface PeriodicElement {
   nombre: string;
   registro: string;
 }
+
 const ELEMENT_DATA: PeriodicElement[] = [
   {codigo: 1, nombre: 'estado 1', registro: 'hola'},
   {codigo: 2, nombre: 'estado 2', registro: 'hola'},

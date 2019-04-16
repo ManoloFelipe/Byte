@@ -19,7 +19,8 @@ import {
     MatSidenavModule,
     MatDialogModule,
     MatChipsModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatRadioModule,    
 
 } from '@angular/material'
 
@@ -43,8 +44,8 @@ import {
         MatSidenavModule,
         MatDialogModule,
         MatChipsModule,
-        MatDatepickerModule
-        
+        MatDatepickerModule,
+        MatRadioModule
      
     ],
     exports:[
@@ -66,8 +67,8 @@ import {
         MatSidenavModule,
         MatDialogModule,
         MatChipsModule,
-        MatDatepickerModule
-        
+        MatDatepickerModule,
+        MatRadioModule
     ]
 })
 
