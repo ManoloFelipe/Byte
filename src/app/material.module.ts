@@ -16,7 +16,9 @@ import {
     MatProgressSpinnerModule,
     MatStepperModule,
     MatCheckboxModule,
-    MatDialogModule
+    MatDialogModule,
+    MatRadioModule,
+    MatSidenavModule
 
 } from '@angular/material'
 
@@ -37,7 +39,9 @@ import {
         MatProgressSpinnerModule,
         MatStepperModule,
         MatCheckboxModule,
-        MatDialogModule
+        MatDialogModule,
+        MatRadioModule,
+        MatSidenavModule
     ],
     exports:[
         MatButtonModule,
@@ -55,7 +59,9 @@ import {
         MatProgressSpinnerModule,
         MatStepperModule,
         MatCheckboxModule,
-        MatDialogModule
+        MatDialogModule,
+        MatRadioModule,
+        MatSidenavModule
     ]
 })
 

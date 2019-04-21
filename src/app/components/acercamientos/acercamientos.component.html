@@ -1,3 +1,15 @@
+<mat-sidenav-container class="sidenav">
+  <mat-sidenav #sidenav [mode]="mode.over">
+    <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+      <p><button mat-button onclick="location.href='asesoresPrestamos'">Asesores de Prestamos</button></p>
+      <p><button mat-button onclick="location.href='tiposDeducciones'">Tipos de Deducciones</button></p>
+      <p><button mat-button onclick="location.href='asesoresPrestamos'">Toggle</button></p>    
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
 <div class="barra-nav">
   <mat-toolbar color="primary" class="example-toolbar">
     <span>My Application</span>
@@ -7,6 +19,8 @@
 </div>
 
 <div style="padding: 20px; margin-top: 5%"></div>
+
+  
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   <!-- Checkbox Column -->
@@ -27,27 +41,15 @@
       </td>
     </ng-container>
 <!-- Position Column -->
-<ng-container matColumnDef="position">
+<ng-container matColumnDef="number">
   <th mat-header-cell *matHeaderCellDef> No. </th>
-  <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+  <td mat-cell *matCellDef="let element"> {{element.number}} </td>
 </ng-container>
 
 <!-- Name Column -->
-<ng-container matColumnDef="name">
-  <th mat-header-cell *matHeaderCellDef> Name </th>
-  <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-</ng-container>
-
-<!-- Weight Column -->
-<ng-container matColumnDef="weight">
-  <th mat-header-cell *matHeaderCellDef> Weight </th>
-  <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
-</ng-container>
-
-<!-- Symbol Column -->
-<ng-container matColumnDef="symbol">
-  <th mat-header-cell *matHeaderCellDef> Symbol </th>
-  <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+<ng-container matColumnDef="description">
+  <th mat-header-cell *matHeaderCellDef> Descripcion </th>
+  <td mat-cell *matCellDef="let element"> {{element.description}} </td>
 </ng-container>
 
 <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -77,4 +79,4 @@
         <mat-icon>search</mat-icon>
     </button>
 </div>
-
+<div>
