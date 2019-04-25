@@ -16,7 +16,7 @@ import { AcercamientosComponent, CrearAcercamiento } from './components/acercami
 import { AsesoresPrestamoComponent, CrearAsesoresPrestamos } from './components/asesores-prestamo/asesores-prestamo.component';
 import { TiposDeduccionesComponent, CrearTiposDeducciones } from './components/tipos-deducciones/tipos-deducciones.component';
 import { ProductosComponent, CrearProducto } from './components/productos/productos.component';
-import { DatosGeneralesComponet } from './components/datos-generales/datos-generales.component';
+import { DatosGeneralesComponet, DialogG, DialogE, DialogN, DialogA } from './components/datos-generales/datos-generales.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +31,11 @@ import { DatosGeneralesComponet } from './components/datos-generales/datos-gener
     CrearProducto,
     CrearAcercamiento,
     CrearAsesoresPrestamos,
-    CrearTiposDeducciones
+    CrearTiposDeducciones,
+    DialogG,
+    DialogE,
+    DialogN,
+    DialogA
   ],
   imports: [
     BrowserModule,
@@ -43,7 +47,11 @@ import { DatosGeneralesComponet } from './components/datos-generales/datos-gener
     CrearAcercamiento, 
     CrearAsesoresPrestamos, 
     CrearTiposDeducciones,
-    CrearProducto],
+    CrearProducto,
+    DialogG,
+    DialogE,
+    DialogN,
+    DialogA],
   providers: [],
   bootstrap: [AppComponent]
 })
