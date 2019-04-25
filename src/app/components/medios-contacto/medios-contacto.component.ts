@@ -27,8 +27,38 @@ export class MediosContactoComponent implements OnInit {
 
   animal: string;
   names: string;
+  mostrar: Boolean;
+  centered = false;
+  disabled = false;
+  unbounded = false;
+
+  radius: number;
+  color: string;
+  
+
+  timeLeft: number;
+  interval;
 
   constructor(public dialog: MatDialog) {}
+
+  
+startTimer() {
+  this.timeLeft = 2;
+    this.interval = setInterval(() => {
+      if(this.timeLeft >0 && this.timeLeft < 10){
+        this.mostrar = true;
+        this.timeLeft--;
+      }
+      else if( this.timeLeft > 0) {
+        this.timeLeft--;
+        
+      } else if (this.timeLeft == 0) {
+        this.mostrar = false;
+        this.openDialog();
+        this.timeLeft = 10000;
+      }
+    },1000)
+  }
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogContacto, {

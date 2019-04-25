@@ -21,6 +21,7 @@ import {
     MatChipsModule,
     MatDatepickerModule,
     MatRadioModule,    
+    MatRippleModule
 
 } from '@angular/material'
 
@@ -45,8 +46,8 @@ import {
         MatDialogModule,
         MatChipsModule,
         MatDatepickerModule,
-        MatRadioModule
-     
+        MatRadioModule,
+        MatRippleModule
     ],
     exports:[
         MatButtonModule,
@@ -68,7 +69,8 @@ import {
         MatDialogModule,
         MatChipsModule,
         MatDatepickerModule,
-        MatRadioModule
+        MatRadioModule,
+        MatRippleModule
     ]
 })
 

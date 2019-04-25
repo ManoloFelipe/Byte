@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -47,6 +47,8 @@ import { OrigenFondosComponent, DialogOrigen } from './components/origen-fondos/
 import { MediosContactoComponent, DialogContacto } from './components/medios-contacto/medios-contacto.component';
 import { MontosPlazoComponent, DailogAgregarMontosPlazo, DailogEditarMontosPlazo,DailogEliminarMontosPlazo } from './components/montos-plazo/montos-plazo.component';
 import { DefinirCategoriaUsuarioComponent,DailogAgregarCategoriaUsuario,DailogEliminarCategoriaUsuario,DailogEditarCategoriaUsuario } from './components/definir-categoria-usuario/definir-categoria-usuario.component';
+import { FormsModule } from '@angular/forms';
+import { MatRippleModule } from '@angular/material';
 
 
 @NgModule({
@@ -128,8 +130,11 @@ import { DefinirCategoriaUsuarioComponent,DailogAgregarCategoriaUsuario,DailogEl
     BrowserModule,
     BrowserAnimationsModule,
     MetarialModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    MatRippleModule,
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   entryComponents: [    
     DailogAgregarCategoriaSIB,
     DailogEditarCategoriaSIB,  

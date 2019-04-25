@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  
   <title>Relación Transacciones Depósitos</title>
   <link rel="stylesheet" type="text/css" href="">
   <meta name="viewport"
@@ -14,39 +15,41 @@
   <div class="contenedor">
     <mat-card id="arriba">BANCO DE PRUEBA BYTE</mat-card>
     <div>
-      <h5 id="Titulo">Mantenimiento A Tipos De Canales De Distribución</h5>
+      <h5 id="Titulo">MANTENIMIENTO A TIPOS DE CANALES DE DISTRIBUCION</h5>
     </div>
 
     <div id="iconos1">
-      <mat-icon id="edit">edit</mat-icon>
-      <mat-icon id="delete">delete</mat-icon>
-      <mat-icon id="delete">visibility</mat-icon>
+      <ul>
+        <ol>
+            <button mat-icon-button><mat-icon id="delete">edit</mat-icon></button>
+    </ol>
+    <ol>
+        <button mat-icon-button>  <mat-icon id="delete">delete</mat-icon></button>
+    </ol>
+    <ol>
+        <button mat-icon-button>  <mat-icon id="delete">search</mat-icon></button>
+    </ol>
+    </ul>
+    </div>
+
+    
+    <div class="division1">
+      <mat-form-field appearance="outline" class="InputRA" >
+        <select matNativeControl required>
+            <option value="volvo">tipo Producto1</option>
+            <option value="saab">tipo Producto2</option>
+            <option value="saab">tipo Producto3</option>
+            <option value="saab">tipo Producto4</option>
+          </select>
+          <mat-icon  matSuffix>search</mat-icon>
+          </mat-form-field>
+
+      <h5 class="Nombre" >Seleccionar en Nombre</h5>
+
     </div>
 
 
-    <div class="a1">
-      <mat-form-field class="example-full-width">
-        <input matInput>
-      </mat-form-field>
-
-      <h5 id="Descr">Seleccionar en Nombre</h5>
-
-    </div>
-
-
-    <div id="inputs">
-      <br>
-
-      <mat-form-field class="example2">
-        <input matInput>
-      </mat-form-field>
-
-      <mat-form-field class="example2">
-        <input matInput>
-      </mat-form-field>
-
-
-    </div>
+    
     <br>
     <br>
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
@@ -95,36 +98,34 @@
     </table>
 
 
+    <mat-spinner class="capa1" *ngIf="mostrar"></mat-spinner>
 
 
-    <hr>
 
     <div id="iconos2">
 
-      <button mat-icon-button>
+      <button mat-icon-button style=" background: #5F6A6A; margin-left: 12px">
         <mat-icon id="back">arrow_back</mat-icon>
       </button>
-      <button mat-icon-button>
+      <button mat-icon-button style=" background: #5F6A6A; margin-left: 12px">
         <mat-icon id="door">meeting_room</mat-icon>
       </button >
-      <button mat-icon-button>
+      <button mat-icon-button style=" background: #5F6A6A; margin-left: 12px">
         <mat-icon id="arrow_left">subdirectory_arrow_left</mat-icon>
       </button>
-      <button mat-icon-button>
-        <mat-icon id="add" title="Registrar">insert_drive_file</mat-icon>
+      <button  mat-icon-button style=" background: #5F6A6A; margin-left: 12px"  (click)='startTimer()'>
+        <mat-icon id="add" title="Registrar" >note_add</mat-icon>
       </button>
-      <button mat-icon-button>
+      <button  mat-icon-button style=" background: #5F6A6A; margin-left: 12px">
         <mat-icon id="table2">table_chart</mat-icon>
       </button>
-      <button mat-icon-button>
+      <button  mat-icon-button style=" background: #5F6A6A; margin-left: 12px">
         <mat-icon id="table2">table_chart_outline</mat-icon>
       </button>
-      <button mat-icon-button>
+      <button  mat-icon-button style=" background: #5F6A6A; margin-left: 12px">
         <mat-icon id="table2">help</mat-icon>
       </button>
-      <button mat-icon-button (click)="openDialog()" >
-        <mat-icon id="table2">arrow_right</mat-icon>
-      </button>
+      
 
 
     </div>

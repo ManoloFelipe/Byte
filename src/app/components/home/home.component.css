@@ -23,7 +23,7 @@
     /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
        causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
     flex: 1;
-    width: 300px;    
+    width: 500px;     
   }
 
   .example-sidenav-container #contenido{
@@ -33,7 +33,7 @@
   }
   
   .example-sidenav-container mat-nav-list{
-    width: 300px
+    width: 1000px
   }
 
   .example-is-mobile .example-sidenav-container {

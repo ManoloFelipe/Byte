@@ -1,5 +1,6 @@
 import {MediaMatcher} from '@angular/cdk/layout';
 import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
+import {MatTableDataSource} from '@angular/material';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +9,10 @@ import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
 })
 export class HomeComponent implements OnDestroy {
   mobileQuery: MediaQueryList;
+
+  applyFilter(filterValue: any){
+    this.fillerContent.filter = filterValue.trim().toLowerCase()
+  }
 
   // fillerNav = Array.from({length: 100}, (_, i) => `Nav Item ${i + 1}`);
 
@@ -44,7 +49,7 @@ export class HomeComponent implements OnDestroy {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
-  shouldRun = [{path: '', component: HomeComponent}, {path: 'home', component: HomeComponent}, {path: '**', component: HomeComponent}].some;
+
 
 
 }
