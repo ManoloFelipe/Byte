@@ -5,11 +5,26 @@
     margin: 0 auto;
   }
   
+  .encabezado{
+    background: #273746
+  }
+
   .example-full-width {
     width: 80%;
   }
   
   table {
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
+  }
+
+  .buttons{
+    margin: 0 auto; 
+    width: 300px;
+    padding: 25px 0;
+    text-align: center
+  }
+  
+  .a{
+    margin: 5px
   }

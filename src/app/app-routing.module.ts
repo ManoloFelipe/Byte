@@ -39,6 +39,7 @@ import { TiposTransaccionesComponent } from './components/tipos-transacciones/ti
 import { OrigenFondosComponent } from './components/origen-fondos/origen-fondos.component';
 import { MediosContactoComponent } from './components/medios-contacto/medios-contacto.component';
 import { MontosPlazoComponent } from './components/montos-plazo/montos-plazo.component';
+import { DefinirCategoriaUsuarioComponent } from './components/definir-categoria-usuario/definir-categoria-usuario.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -74,12 +75,13 @@ const routes: Routes = [
     {path: 'tiposCanalesDistribucion', component: TiposCanalesDistribucionComponent},
   //25-58
     {path: 'acercamiento', component: AcercamientosComponent},
-    {path: 'asesoresPrestamos', component: AsesoresPrestamoComponent},
+    {path: 'acesoresPrestamos', component: AsesoresPrestamoComponent},
     {path: 'bancos', component: BancosComponent},
     {path: 'tiposDeducciones', component: TiposDeduccionesComponent},
 
   //46-49
     {path: 'montosPlazo', component: MontosPlazoComponent},
+    {path: 'definirCategoriaUsuario', component: DefinirCategoriaUsuarioComponent},
   //----------------------------------------------------------------------------------------------------
   //----------------------------------------- ENTREGA 2 -------------------------------------------------
     {path: 'tiposPresatmos', component: TiposPrestamosComponent},

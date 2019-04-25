@@ -1,15 +1,15 @@
 <mat-toolbar color="primary" class="encabezado">My App</mat-toolbar>
-
-<form class="example-form">
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="Codigo categoria">
-  </mat-form-field>
-  <br>
-  <br>
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="Descripcion categoria">
-  </mat-form-field>
-</form>  
+<br>
+<br>
+<div class="example-form">
+    <mat-form-field appearance="fill">
+        <mat-label>Buscar por codigo</mat-label>
+        <input matInput>                                                                                        
+    </mat-form-field>
+    <button mat-icon-button>
+      <mat-icon matSuffix>search</mat-icon>
+    </button>                
+  </div>  
   <br>
   <br>
   
@@ -50,25 +50,19 @@
       (click)="selection.toggle(row)">
   </tr>
 </table>
-br>
+<br>
 <br>
 <div class="buttons">
     <button mat-icon-button style="color:white; background: #5F6A6A " class="a" onclick="location.href=''">
         <mat-icon>home</mat-icon>
     </button>
-    <button mat-icon-button style="color:white; background: #5F6A6A " class="a">
-        <mat-icon>keyboard_return</mat-icon>
-    </button>
     <button mat-icon-button style="color:white; background: #5F6A6A " class="a"  (click)="openDialog()">
         <mat-icon>note_add</mat-icon>
     </button>
-    <button mat-icon-button style="color:white; background: #5F6A6A " class="a">
+    <button mat-icon-button style="color:white; background: #5F6A6A " class="a" (click)="openDialogDelete()">
         <mat-icon>delete_sweep</mat-icon>
     </button>
-    <button mat-icon-button style="color:white; background: #5F6A6A " class="a" >
+    <button mat-icon-button style="color:white; background: #5F6A6A " class="a" (click)="openDialogEdit()">
         <mat-icon>create</mat-icon>
-    </button>
-    <button mat-icon-button style="color:white; background: #5F6A6A " class="a">
-        <mat-icon>search</mat-icon>
     </button>
 </div>

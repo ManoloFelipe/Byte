@@ -3,6 +3,7 @@
   max-width: 500px;
   width: 100%;
   margin: 0 auto;
+  text-align: center
 }
 
 .example-full-width {
@@ -17,4 +18,19 @@ table {
 .inputAgregar{
   width: 50%;
   margin: 0 auto;
+}
+
+.encabezado{
+  background: #273746
+}
+
+.buttons{
+  margin: 0 auto; 
+  width: 300px;
+  padding: 25px 0;
+  text-align: center
+}
+
+.a{
+  margin: 5px; 
 }

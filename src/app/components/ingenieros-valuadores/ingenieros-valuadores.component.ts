@@ -47,6 +47,30 @@ export class IngenierosValuadoresComponent implements OnInit {
     });
   }
 
+  openDialogEdit(): void {
+    const dialogRef = this.dialog.open(DailogEditarIngenierosValuadores, {
+      width: '500px',
+      data: {codigo: this.codigo, nombre: this.nombre, registro: this.registro}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.nombre = result;
+    });
+  }
+
+  openDialogDelete(): void {
+    const dialogRef = this.dialog.open(DailogEliminarIngenierosValuadores, {
+      width: '450px',
+      data: {codigo: this.codigo, nombre: this.nombre, registro: this.registro}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.nombre = result;
+    });
+  }
+
   ngOnInit() {
   }
 
@@ -87,6 +111,40 @@ export class DailogAgregarIngenierosValuadores {
 
   constructor(
     public dialogRef: MatDialogRef<DailogAgregarIngenierosValuadores>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+
+    onNoClick(): void {
+      this.dialogRef.close();
+    }
+
+}
+
+@Component({
+  selector: 'dialog-overview-example-dialog',
+  templateUrl: './editar-ingenieros-valuadores.component.html',
+  styleUrls: ['./ingenieros-valuadores.component.css']
+})
+export class DailogEditarIngenierosValuadores {
+
+  constructor(
+    public dialogRef: MatDialogRef<DailogEditarIngenierosValuadores>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+
+    onNoClick(): void {
+      this.dialogRef.close();
+    }
+
+}
+
+@Component({
+  selector: 'dialog-overview-example-dialog',
+  templateUrl: './eliminar-ingenieros-valuadores.component.html',
+  styleUrls: ['./ingenieros-valuadores.component.css']
+})
+export class DailogEliminarIngenierosValuadores {
+
+  constructor(
+    public dialogRef: MatDialogRef<DailogEliminarIngenierosValuadores>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
 
     onNoClick(): void {

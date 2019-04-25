@@ -44,6 +44,30 @@ export class CategoriasSIBComponent implements OnInit {
     });
   }
 
+  openDialogDelete(): void {
+    const dialogRef = this.dialog.open(DailogEliminarCategoriaSIB, {
+      width: '500px',
+      data: {codigo: this.codigo, descripcion: this.descripcion}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.descripcion = result;
+    });
+  }
+
+  openDialogEdit(): void {
+    const dialogRef = this.dialog.open(DailogEditarCategoriaSIB, {
+      width: '500px',
+      data: {codigo: this.codigo, descripcion: this.descripcion}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.descripcion = result;
+    });
+  }
+
   ngOnInit() {
   }
 
@@ -84,6 +108,40 @@ export class DailogAgregarCategoriaSIB {
 
   constructor(
     public dialogRef: MatDialogRef<DailogAgregarCategoriaSIB>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+
+    onNoClick(): void {
+      this.dialogRef.close();
+    }
+
+}
+
+@Component({
+  selector: 'dialog-overview-example-dialog',
+  templateUrl: './eliminar-categoria-sib.component.html',
+  styleUrls: ['./categorias-sib.component.css']
+})
+export class DailogEliminarCategoriaSIB {
+
+  constructor(
+    public dialogRef: MatDialogRef<DailogEliminarCategoriaSIB>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+
+    onNoClick(): void {
+      this.dialogRef.close();
+    }
+
+}
+
+@Component({
+  selector: 'dialog-overview-example-dialog',
+  templateUrl: './editar-categoria-sib.component.html',
+  styleUrls: ['./categorias-sib.component.css']
+})
+export class DailogEditarCategoriaSIB {
+
+  constructor(
+    public dialogRef: MatDialogRef<DailogEditarCategoriaSIB>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
 
     onNoClick(): void {

@@ -3,6 +3,7 @@
   max-width: 500px;
   width: 100%;
   margin: 0 auto;
+  text-align: center
 }
 
 .example-full-width {
@@ -14,6 +15,17 @@ table {
   margin: 0 auto;
 }
 
-.Iconos{
-    margin-left: 10px
+.buttons{
+  margin: 0 auto; 
+  width: 300px;
+  padding: 25px 0;
+  text-align: center
+}
+
+.a{
+  margin: 5px
+}
+
+.encabezado{
+  background: #273746
 }

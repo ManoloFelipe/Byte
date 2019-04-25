@@ -40,12 +40,32 @@ export class MontosPlazoComponent implements OnInit {
   valorMaximo: number;
   plazo: string;
   tasa: number;
-  
+  showSpinner = false;
+
   constructor(public dialog: MatDialog) {}
+
+  cargar(){
+    this.showSpinner = true;
+    setTimeout(()=>{
+      this.showSpinner = false;
+    },2000)
+  }
 
   openDialogAdd(): void {
     const dialogRef = this.dialog.open(DailogAgregarMontosPlazo, {
       width: '500px',
+      data: {codigo: this.codigo, valorMinimo: this.valorMinimo, valorMaximo: this.valorMaximo, plazo: this.plazo, tasa: this.tasa}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.codigo = result;
+    });
+  }
+
+  openDialogDelete(): void {
+    const dialogRef = this.dialog.open(DailogEliminarMontosPlazo, {
+      width: '400px',
       data: {codigo: this.codigo, valorMinimo: this.valorMinimo, valorMaximo: this.valorMaximo, plazo: this.plazo, tasa: this.tasa}
     });
 
@@ -125,6 +145,24 @@ export class DailogEditarMontosPlazo {
 
   constructor(
     public dialogRef: MatDialogRef<DailogEditarMontosPlazo>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+
+    onNoClick(): void {
+      this.dialogRef.close();
+    }
+
+}
+
+@Component({
+  selector: 'dialog-overview-example-dialog',
+  templateUrl: './eliminar-montos-plazo.component.html',
+  styleUrls: ['./montos-plazo.component.css']
+})
+
+export class DailogEliminarMontosPlazo {
+
+  constructor(
+    public dialogRef: MatDialogRef<DailogEliminarMontosPlazo>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
 
     onNoClick(): void {

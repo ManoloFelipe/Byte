@@ -34,8 +34,32 @@ export class EstatusGarantiaRealComponent implements OnInit {
 
   constructor(public dialog: MatDialog) {}
 
-  openDialog(): void {
+  openDialogAdd(): void {
     const dialogRef = this.dialog.open(DailogAgregarEstatusGarantiaReal, {
+      width: '500px',
+      data: {estatus: this.estatus, descripcion: this.descripcion}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.estatus = result;
+    });
+  }
+
+  openDialogEdit(): void {
+    const dialogRef = this.dialog.open(DailogEditarEstatusGarantiaReal, {
+      width: '500px',
+      data: {estatus: this.estatus, descripcion: this.descripcion}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.estatus = result;
+    });
+  }
+
+  openDialogDelete(): void {
+    const dialogRef = this.dialog.open(DailogEliminarEstatusGarantiaReal, {
       width: '500px',
       data: {estatus: this.estatus, descripcion: this.descripcion}
     });
@@ -86,6 +110,39 @@ export class DailogAgregarEstatusGarantiaReal {
 
   constructor(
     public dialogRef: MatDialogRef<DailogAgregarEstatusGarantiaReal>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+
+    onNoClick(): void {
+      this.dialogRef.close();
+    }
+
+}
+
+@Component({
+  selector: 'dialog-overview-example-dialog',
+  templateUrl: './editar-estado-garantia-real.component.html',
+  styleUrls: ['./estatus-garantia-real.component.css']
+})
+export class DailogEditarEstatusGarantiaReal {
+
+  constructor(
+    public dialogRef: MatDialogRef<DailogEditarEstatusGarantiaReal>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+
+    onNoClick(): void {
+      this.dialogRef.close();
+    }
+
+}
+@Component({
+  selector: 'dialog-overview-example-dialog',
+  templateUrl: './eliminar-estado-garantia-real.component.html',
+  styleUrls: ['./estatus-garantia-real.component.css']
+})
+export class DailogEliminarEstatusGarantiaReal {
+
+  constructor(
+    public dialogRef: MatDialogRef<DailogEliminarEstatusGarantiaReal>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
 
     onNoClick(): void {

@@ -1,21 +1,64 @@
-<mat-toolbar class="encabezado" color="primary">My App</mat-toolbar>
-<div class="example-container" [class.example-is-mobile]="mobileQuery.matches" *ngIf="shouldRun">
-    <mat-toolbar color="primary" class="example-toolbar">
-      <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
-      <h1 class="example-app-name">Responsive App</h1>
-    </mat-toolbar>
+
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches" *ngIf="shouldRun"> 
+    <mat-toolbar class="example-toolbar" style="background: #273746" color="primary">
+        <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+        My App
+      </mat-toolbar>     
+  <mat-sidenav-container class="example-sidenav-container"
+                         [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+                 [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+      <mat-nav-list>
+          <a mat-list-item routerLink="almacenadora"><h3>Alamacenadora</h3></a><hr>
+          <a mat-list-item routerLink="aseguradora"><h3>Aseguradoras</h3></a><hr>
+          <a mat-list-item routerLink="agrupacionCredito"><h3>Agrupacion de Creditos</h3></a><hr>
+          <a mat-list-item routerLink="lugaresInversion"><h3>Lugares de Inversion</h3></a><hr>
+
+          <a mat-list-item routerLink="ubicacionGarantia"><h3>Ubicacion de Garantia</h3></a><hr>
+          <a mat-list-item routerLink="origenFondos"><h3>Origen de Fondos</h3></a><hr>
+          <a mat-list-item routerLink="fromasPago"><h3>Formas de Pago</h3></a><hr>
+          <a mat-list-item routerLink="destinos"><h3>Destinos</h3></a><hr>
+
+          <a mat-list-item routerLink="categoriasSIB"><h3>categoriasSIB</h3></a><hr>
+          <a mat-list-item routerLink="estatusGarantiaReal"><h3>Estatus de Garantia Real</h3></a><hr>
+          <a mat-list-item routerLink="estatusAvaluos"><h3>Estatus de Avaluos</h3></a><hr>
+          <a mat-list-item routerLink="ingenierosValuadores"><h3>Ingenieros Valuadores</h3></a><hr>
+
+          <a mat-list-item routerLink="notarios"><h3>Notarios</h3></a><hr>
+          <a mat-list-item routerLink="motivosAjuste"><h3>Motivos de Ajuste</h3></a><hr>
+          <a mat-list-item routerLink="diasInhabiles"><h3>Dias Inhabilies</h3></a><hr>
+          <a mat-list-item routerLink="cobrosAdicionales"><h3>Cobros Adicionales</h3></a><hr>
+
+          <a mat-list-item routerLink="institucionesCobroAdicional"><h3>Instituciones de Cobro Adicional</h3></a><hr>
+          <a mat-list-item routerLink="motivosReserva"><h3>Motivos de Reserva</h3></a><hr>
+          <a mat-list-item routerLink="formasDesembolso"><h3>Formas de Desembolso</h3></a><hr>
+          <a mat-list-item routerLink="motivosReferenciaCliente"><h3>Motivos de Referencia al Cliente</h3></a><hr>
+
+          <a mat-list-item routerLink="relacionTransaccionDeposito"><h3>Relacion Transacion Deposito</h3></a><hr>
+          <a mat-list-item routerLink="MediosContacto"><h3>Medios de Contacto</h3></a><hr>
+          <a mat-list-item routerLink="canalesVenta"><h3>Canales de Venta</h3></a><hr>
+          <a mat-list-item routerLink="tiposCanalesDistribucion"><h3>Tipos Canales de Distribucion</h3></a><hr>
+
+          <a mat-list-item routerLink="acercamiento"><h3>Acercamiento</h3></a><hr>
+          <a mat-list-item routerLink="acesoresPrestamos"><h3>Acesores de Prestamos</h3></a><hr>
+          <a mat-list-item routerLink="bancos"><h3>Bancos</h3></a><hr>
+          <a mat-list-item routerLink="tiposDeducciones"><h3>Tipos de Deduccion</h3></a><hr>
+
+          <a mat-list-item routerLink="montosPlazo"><h3>Montos de Plazo</h3></a><hr>
+          <a mat-list-item routerLink="definirCategoriaUsuario"><h3>Categoria de Usuario</h3></a><hr>
+
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <p id="contenido" *ngFor="let content of fillerContent">{{content}}</p>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+
+
+    <img class="example-card" src="https://media.licdn.com/dms/image/C4E0BAQFiWFWLT_7T2Q/company-logo_200_200/0?e=2159024400&v=beta&t=BO4dFmbTlszrKncj-Xpm_YrMi9Au7dBSoPvGhnt5lhc" alt="Logo Byte">
+
   
-    <mat-sidenav-container class="example-sidenav-container"
-                           [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
-      <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
-                   [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
-        <mat-nav-list>
-          <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{nav}}</a>
-        </mat-nav-list>
-      </mat-sidenav>
-  
-      <mat-sidenav-content>
-        <p *ngFor="let content of fillerContent">{{content}}</p>
-      </mat-sidenav-content>
-    </mat-sidenav-container>
-  </div>
+
+<div *ngIf="!shouldRun">Please open on Stackblitz to see result</div>

@@ -43,6 +43,30 @@ export class EstatusAvaluosComponent implements OnInit {
     });
   }
 
+  openDialogEdit(): void {
+    const dialogRef = this.dialog.open(DailogEditarEstatusAvaluos, {
+      width: '500px',
+      data: {codigo: this.codigo, descripcion: this.descripcion}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.descripcion = result;
+    });
+  }
+
+  openDialogDelete(): void {
+    const dialogRef = this.dialog.open(DailogEliminarEstatusAvaluos, {
+      width: '500px',
+      data: {codigo: this.codigo, descripcion: this.descripcion}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.descripcion = result;
+    });
+  }
+
   ngOnInit() {
   }
 
@@ -83,6 +107,40 @@ export class DailogAgregarEstatusAvaluos {
 
   constructor(
     public dialogRef: MatDialogRef<DailogAgregarEstatusAvaluos>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+
+    onNoClick(): void {
+      this.dialogRef.close();
+    }
+
+}
+
+@Component({
+  selector: 'dialog-overview-example-dialog',
+  templateUrl: './editar-estatus-avaluos.component.html',
+  styleUrls: ['./estatus-avaluos.component.css']
+})
+export class DailogEditarEstatusAvaluos {
+
+  constructor(
+    public dialogRef: MatDialogRef<DailogEditarEstatusAvaluos>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+
+    onNoClick(): void {
+      this.dialogRef.close();
+    }
+
+}
+
+@Component({
+  selector: 'dialog-overview-example-dialog',
+  templateUrl: './eliminar-estatus-avaluos.component.html',
+  styleUrls: ['./estatus-avaluos.component.css']
+})
+export class DailogEliminarEstatusAvaluos {
+
+  constructor(
+    public dialogRef: MatDialogRef<DailogEliminarEstatusAvaluos>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
 
     onNoClick(): void {

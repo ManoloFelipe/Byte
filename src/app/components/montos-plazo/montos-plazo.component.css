@@ -11,6 +11,10 @@ form{
     width: 300px;
     padding: 25px 0;
   }
+
+.a{
+    margin: 5px; 
+}
 .mat-elevation-z8 {
     width: 80%;
     margin: 0 auto;
@@ -22,5 +26,8 @@ form{
 
 #buscador{
     text-align: center;
-    width: 300px;
+}
+
+.encabezado{
+    background: #273746
 }

@@ -11,7 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UbicacionGarantiaComponent, DialogOverviewExampleDialog } from './components/ubicacion-garantia/ubicacion-garantia.component';
 import { HomeComponent } from './components/home/home.component';
-import { CategoriasSIBComponent, DailogAgregarCategoriaSIB} from './components/categorias-sib/categorias-sib.component';
+import { CategoriasSIBComponent, DailogAgregarCategoriaSIB,DailogEliminarCategoriaSIB,DailogEditarCategoriaSIB,} from './components/categorias-sib/categorias-sib.component';
 import { AgrupacionCreditosComponent } from './components/agrupacion-creditos/agrupacion-creditos.component';
 import { AcercamientosComponent, CrearAcercamiento } from './components/acercamientos/acercamientos.component';
 import { AlmacenadoraComponent } from './components/almacenadora/almacenadora.component';
@@ -23,13 +23,13 @@ import { CanalesVentaComponent,DialogCanal } from './components/canales-venta/ca
 import { CobrosAdicionalesComponent, DialogCobroAdicional} from './components/cobros-adicionales/cobros-adicionales.component';
 import { DestinosComponent, DialogDestinos } from './components/destinos/destinos.component';
 import { DiasInhabilesComponent, DialogDiaInhabil} from './components/dias-inhabiles/dias-inhabiles.component';
-import { EstatusAvaluosComponent, DailogAgregarEstatusAvaluos } from './components/estatus-avaluos/estatus-avaluos.component';
-import { EstatusGarantiaRealComponent,DailogAgregarEstatusGarantiaReal } from './components/estatus-garantia-real/estatus-garantia-real.component';
+import { EstatusAvaluosComponent, DailogAgregarEstatusAvaluos,DailogEditarEstatusAvaluos, DailogEliminarEstatusAvaluos } from './components/estatus-avaluos/estatus-avaluos.component';
+import { EstatusGarantiaRealComponent,DailogAgregarEstatusGarantiaReal, DailogEditarEstatusGarantiaReal, DailogEliminarEstatusGarantiaReal, } from './components/estatus-garantia-real/estatus-garantia-real.component';
 import { FormasDesembolsoComponent } from './components/formas-desembolso/formas-desembolso.component';
 import { FormasPagoComponent, DialogFormas } from './components/formas-pago/formas-pago.component';
 import { FrecuenciasAmortizacionComponent } from './components/frecuencias-amortizacion/frecuencias-amortizacion.component';
 import { GarantiasContablesComponent } from './components/garantias-contables/garantias-contables.component';
-import { IngenierosValuadoresComponent, DailogAgregarIngenierosValuadores } from './components/ingenieros-valuadores/ingenieros-valuadores.component';
+import { IngenierosValuadoresComponent, DailogAgregarIngenierosValuadores, DailogEditarIngenierosValuadores, DailogEliminarIngenierosValuadores } from './components/ingenieros-valuadores/ingenieros-valuadores.component';
 import { InstitucionesCobrosAdicionalesComponent } from './components/instituciones-cobros-adicionales/instituciones-cobros-adicionales.component';
 import { LugaresInversionComponent } from './components/lugares-inversion/lugares-inversion.component';
 import { MotivosAjustesComponent, DialogMotivoAjuste } from './components/motivos-ajustes/motivos-ajustes.component';
@@ -45,7 +45,8 @@ import { TiposPrestamosComponent } from './components/tipos-prestamos/tipos-pres
 import { TiposTransaccionesComponent } from './components/tipos-transacciones/tipos-transacciones.component';
 import { OrigenFondosComponent, DialogOrigen } from './components/origen-fondos/origen-fondos.component';
 import { MediosContactoComponent, DialogContacto } from './components/medios-contacto/medios-contacto.component';
-import { MontosPlazoComponent, DailogAgregarMontosPlazo, DailogEditarMontosPlazo } from './components/montos-plazo/montos-plazo.component';
+import { MontosPlazoComponent, DailogAgregarMontosPlazo, DailogEditarMontosPlazo,DailogEliminarMontosPlazo } from './components/montos-plazo/montos-plazo.component';
+import { DefinirCategoriaUsuarioComponent,DailogAgregarCategoriaUsuario,DailogEliminarCategoriaUsuario,DailogEditarCategoriaUsuario } from './components/definir-categoria-usuario/definir-categoria-usuario.component';
 
 
 @NgModule({
@@ -88,10 +89,19 @@ import { MontosPlazoComponent, DailogAgregarMontosPlazo, DailogEditarMontosPlazo
     PasosCierreComponent,
     TiposTransaccionesComponent,
     MontosPlazoComponent,
-    DailogAgregarEstatusGarantiaReal,
+    DefinirCategoriaUsuarioComponent,
     DailogAgregarCategoriaSIB,
+    DailogEliminarCategoriaSIB,
+    DailogEditarCategoriaSIB,
+    DailogAgregarEstatusGarantiaReal,
+    DailogEditarEstatusGarantiaReal,
+    DailogEliminarEstatusGarantiaReal,
     DailogAgregarEstatusAvaluos,
+    DailogEditarEstatusAvaluos,
+    DailogEliminarEstatusAvaluos,
     DailogAgregarIngenierosValuadores,
+    DailogEditarIngenierosValuadores,
+    DailogEliminarIngenierosValuadores,
     DialogOverviewExampleDialog,
     CrearAcercamiento,
     CrearAsesoresPrestamos,
@@ -107,8 +117,12 @@ import { MontosPlazoComponent, DailogAgregarMontosPlazo, DailogEditarMontosPlazo
     CrearTiposDeducciones,
     DialogOrigen,
     DialogContacto,
-    DailogAgregarMontosPlazo,
-    DailogEditarMontosPlazo
+    DailogAgregarMontosPlazo,//-------
+    DailogEditarMontosPlazo,//--------
+    DailogEliminarMontosPlazo,//------
+    DailogAgregarCategoriaUsuario,
+    DailogEliminarCategoriaUsuario,
+    DailogEditarCategoriaUsuario
   ],
   imports: [
     BrowserModule,
@@ -116,11 +130,19 @@ import { MontosPlazoComponent, DailogAgregarMontosPlazo, DailogEditarMontosPlazo
     MetarialModule,
     AppRoutingModule
   ],
-  entryComponents: [
-    DailogAgregarEstatusGarantiaReal,
+  entryComponents: [    
     DailogAgregarCategoriaSIB,
+    DailogEditarCategoriaSIB,  
+    DailogEliminarCategoriaSIB,
+    DailogAgregarEstatusGarantiaReal,
+    DailogEditarEstatusGarantiaReal,
+    DailogEliminarEstatusGarantiaReal,
     DailogAgregarEstatusAvaluos,
+    DailogEditarEstatusAvaluos,
+    DailogEliminarEstatusAvaluos,
     DailogAgregarIngenierosValuadores,
+    DailogEditarIngenierosValuadores,
+    DailogEliminarIngenierosValuadores,
     DialogOverviewExampleDialog,
     CrearAcercamiento,
     CrearAsesoresPrestamos,
@@ -136,8 +158,14 @@ import { MontosPlazoComponent, DailogAgregarMontosPlazo, DailogEditarMontosPlazo
     CrearTiposDeducciones,
     DialogOrigen,
     DialogContacto,
-    DailogAgregarMontosPlazo,
-    DailogEditarMontosPlazo
+    DailogAgregarMontosPlazo,//-----------------
+    DailogEditarMontosPlazo,//------------------
+    DailogEliminarMontosPlazo,//----------------
+    DailogAgregarCategoriaUsuario,
+    DailogEliminarCategoriaUsuario,
+    DailogEditarCategoriaUsuario,
+      
+    HomeComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
