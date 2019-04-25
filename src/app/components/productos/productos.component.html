@@ -3,7 +3,7 @@
   <mat-toolbar color="primary" class="example-toolbar">
     <span>My Application</span>
     <span style="flex: 1 1 auto"></span>
-    <button mat-button [matMenuTriggerFor]="productos">Productos</button>
+    <button mat-button [matMenuTriggerFor]="productos" mat-stroked-button	>Productos</button>
 <mat-menu #productos="matMenu">
   <button mat-menu-item [matMenuTriggerFor]="subproductos">Sub-Productos</button>
 </mat-menu>
@@ -35,6 +35,7 @@
 <div class="buttons">
   <button mat-icon-button color="primary" onclick="location.href=''">
       <mat-icon>home</mat-icon>
+      <mat-label>Inicio</mat-label>
   </button>
   <button mat-icon-button color="primary">
       <mat-icon>keyboard_return</mat-icon>

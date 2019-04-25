@@ -7,6 +7,7 @@ import { AcercamientosComponent } from './components/acercamientos/acercamientos
 import { AsesoresPrestamoComponent } from './components/asesores-prestamo/asesores-prestamo.component';
 import { TiposDeduccionesComponent } from './components/tipos-deducciones/tipos-deducciones.component';
 import { ProductosComponent } from './components/productos/productos.component';
+import { DatosGeneralesComponet } from './components/datos-generales/datos-generales.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'asesoresPrestamos', component: AsesoresPrestamoComponent},
   {path: 'tiposDeducciones', component: TiposDeduccionesComponent},
   {path: 'productos', component: ProductosComponent},
+  {path: 'datosGenerales', component: DatosGeneralesComponet},
   {path: '**', component: HomeComponent}
 ];
 

@@ -20,7 +20,8 @@ import {
     MatRadioModule,
     MatSidenavModule,
     MatPaginatorModule,
-    MatMenuModule
+    MatMenuModule,
+    MatSelectModule
 } from '@angular/material'
 
 @NgModule({
@@ -45,6 +46,7 @@ import {
         MatSidenavModule,
         MatPaginatorModule,
         MatMenuModule,
+        MatSelectModule
     ],
     exports:[
         MatButtonModule,
@@ -67,6 +69,7 @@ import {
         MatSidenavModule,
         MatPaginatorModule,
         MatMenuModule,
+        MatSelectModule
     ]
 })
 
