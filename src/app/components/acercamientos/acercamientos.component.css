@@ -52,3 +52,10 @@
   left: 0;
   right: 0;
 }
+
+.no {
+display:none;
+}
+.si {
+display:block;
+}

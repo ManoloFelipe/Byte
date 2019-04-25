@@ -18,7 +18,8 @@ import {
     MatCheckboxModule,
     MatDialogModule,
     MatRadioModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatPaginatorModule
 
 } from '@angular/material'
 
@@ -41,7 +42,8 @@ import {
         MatCheckboxModule,
         MatDialogModule,
         MatRadioModule,
-        MatSidenavModule
+        MatSidenavModule,
+        MatPaginatorModule
     ],
     exports:[
         MatButtonModule,
@@ -61,7 +63,8 @@ import {
         MatCheckboxModule,
         MatDialogModule,
         MatRadioModule,
-        MatSidenavModule
+        MatSidenavModule,
+        MatPaginatorModule
     ]
 })
 

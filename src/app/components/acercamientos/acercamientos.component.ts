@@ -1,6 +1,6 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, ViewChild } from '@angular/core';
 import {SelectionModel} from '@angular/cdk/collections';
-import {MatTableDataSource} from '@angular/material';
+import {MatTableDataSource, MatPaginator} from '@angular/material';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import {FormControl} from '@angular/forms';
 
@@ -50,9 +50,6 @@ export class AcercamientosComponent implements OnInit {
   }
 
 
-  ngOnInit() {
-  }
-
   displayedColumns: string[] = ['select', 'number', 'description'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   selection = new SelectionModel<PeriodicElement>(true, []);
@@ -79,10 +76,21 @@ export class AcercamientosComponent implements OnInit {
     return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.number + 1}`;
   }
 
-  myFunciton(): void{
 
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+
+  ngOnInit() {
+    this.dataSource.paginator = this.paginator;
   }
 
+
+  muestra(id){
+    if(id.className=='no'){
+    document.getElementById(id).className='si';
+    }else{
+      document.getElementById(id).className='no';
+    }
+  }
 }
 //----------------------------------------- COMPONENTE DEL DIALOG --------------------------------------- 
 
