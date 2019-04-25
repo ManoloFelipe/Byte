@@ -15,6 +15,7 @@ import { CategoriasSIBComponent } from './components/categorias-sib/categorias-s
 import { AcercamientosComponent, CrearAcercamiento } from './components/acercamientos/acercamientos.component';
 import { AsesoresPrestamoComponent, CrearAsesoresPrestamos } from './components/asesores-prestamo/asesores-prestamo.component';
 import { TiposDeduccionesComponent, CrearTiposDeducciones } from './components/tipos-deducciones/tipos-deducciones.component';
+import { ProductosComponent, CrearProducto } from './components/productos/productos.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +25,8 @@ import { TiposDeduccionesComponent, CrearTiposDeducciones } from './components/t
     AcercamientosComponent,
     AsesoresPrestamoComponent,
     TiposDeduccionesComponent,
+    ProductosComponent,
+    CrearProducto,
     CrearAcercamiento,
     CrearAsesoresPrestamos,
     CrearTiposDeducciones
@@ -37,7 +40,8 @@ import { TiposDeduccionesComponent, CrearTiposDeducciones } from './components/t
   entryComponents: [
     CrearAcercamiento, 
     CrearAsesoresPrestamos, 
-    CrearTiposDeducciones],
+    CrearTiposDeducciones,
+    CrearProducto],
   providers: [],
   bootstrap: [AppComponent]
 })

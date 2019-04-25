@@ -6,6 +6,7 @@ import { CategoriasSIBComponent } from './components/categorias-sib/categorias-s
 import { AcercamientosComponent } from './components/acercamientos/acercamientos.component';
 import { AsesoresPrestamoComponent } from './components/asesores-prestamo/asesores-prestamo.component';
 import { TiposDeduccionesComponent } from './components/tipos-deducciones/tipos-deducciones.component';
+import { ProductosComponent } from './components/productos/productos.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'acercamientos', component: AcercamientosComponent},
   {path: 'asesoresPrestamos', component: AsesoresPrestamoComponent},
   {path: 'tiposDeducciones', component: TiposDeduccionesComponent},
+  {path: 'productos', component: ProductosComponent},
   {path: '**', component: HomeComponent}
 ];
 
