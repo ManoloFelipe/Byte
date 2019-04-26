@@ -1,3 +1,120 @@
-<button mat-flat-button>
-Click
-</button>
+<mat-toolbar color="warn">
+    
+        <mat-toolbar-row>
+          <span>IN6AV</span>
+          <span class="example-spacer"></span>
+          <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
+        </mat-toolbar-row>
+      
+      </mat-toolbar>
+
+<br>
+
+<mat-card>
+        <mat-card-title>
+                Ubicación Garantía
+        </mat-card-title>
+</mat-card>
+<br>
+
+<div id="iconos">
+        <button mat-icon-button color="warn">
+                <mat-icon>edit_location</mat-icon>
+        </button>
+        <button mat-icon-button color="warn">
+                        <mat-icon>delete_sweep</mat-icon>
+        </button>
+        <button mat-icon-button color="warn">
+                        <mat-icon>remove_red_eye</mat-icon>
+        </button>
+
+</div>
+
+
+<div id="agregar">
+        <p>
+                <mat-form-field appearance="outline">
+                  <mat-label>Seleccionar</mat-label>
+                  <input matInput placeholder="Ingrese el nombre">
+                  <mat-icon matSuffix>find_replace</mat-icon>
+                  <mat-hint>Seleccionar por nombre</mat-hint>
+                </mat-form-field>
+              </p>
+              <p>
+                <mat-form-field appearance="outline">
+                  <mat-label>Seleccionar</mat-label>
+                  <input matInput placeholder="Ingrese el nombre">
+                  <mat-icon matSuffix>find_replace</mat-icon>
+                  <mat-hint>Seleccionar por ID</mat-hint>
+                </mat-form-field>
+              </p>
+</div>
+<br>
+<div id="table">
+       <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      
+        <!-- Checkbox Column -->
+        <ng-container matColumnDef="select">
+          <th mat-header-cell *matHeaderCellDef>
+            <mat-checkbox (change)="$event ? masterToggle() : null"
+                          [checked]="selection.hasValue() && isAllSelected()"
+                          [indeterminate]="selection.hasValue() && !isAllSelected()"
+                          [aria-label]="checkboxLabel()">
+            </mat-checkbox>
+          </th>
+          <td mat-cell *matCellDef="let row">
+            <mat-checkbox (click)="$event.stopPropagation()"
+                          (change)="$event ? selection.toggle(row) : null"
+                          [checked]="selection.isSelected(row)"
+                          [aria-label]="checkboxLabel(row)">
+            </mat-checkbox>
+          </td>
+        </ng-container>
+      
+        <!-- Position Column -->
+        <ng-container matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef> Código </th>
+          <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        </ng-container>
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Descripción </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+            
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+            (click)="selection.toggle(row)">
+        </tr>
+      </table>           
+</div>
+
+<div id="iconos2">
+<p>
+        <button mat-icon-button color="warn">
+                <mat-icon>keyboard_backspace</mat-icon>
+        </button>
+        <button mat-icon-button color="warn">
+                        <mat-icon>meeting_room</mat-icon>
+        </button>
+        <button mat-icon-button color="warn">
+                        <mat-icon>subdirectory_arrow_left</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" (click)="openDialog()">
+                        <mat-icon>add_to_photos</mat-icon>
+        </button>
+        <button mat-icon-button color="warn">
+                        <mat-icon>table_chart</mat-icon>
+        </button>
+        <button mat-icon-button color="warn">
+                        <mat-icon>view_compact</mat-icon>
+        </button>
+        <button mat-icon-button color="warn">
+                        <mat-icon>live_help</mat-icon>
+        </button>
+</p>
+</div>
+
+
+<!--position: fixed; para que no se mueva-->

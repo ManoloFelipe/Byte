@@ -1,13 +1,14 @@
-
 <div class="barra-nav">
-  <mat-toolbar color="primary" class="example-toolbar">
-    <span>My Application</span>
+  <mat-toolbar style="color: #273746" class="example-toolbar">
+    <mat-card id="MatCard">My Application</mat-card>
+
     <span style="flex: 1 1 auto"></span>
     <span>Acercamientos</span>
   </mat-toolbar>
 </div>
 
 <div style="padding: 20px; margin-top: 5%"></div>
+
 
 <div class="buttons">
   <button mat-icon-button color="primary" onclick="javascript:nameformdiv.className='si';">
@@ -77,6 +78,7 @@
     (click)="selection.toggle(row)">
 </tr>
 </table>
+
 
 <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons style="width:90%"></mat-paginator>
 <br>

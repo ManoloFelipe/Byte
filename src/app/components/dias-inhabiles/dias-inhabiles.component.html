@@ -1,3 +1,107 @@
-<p>
-  dias-inhabiles works!
-</p>
+
+<mat-toolbar class="encabezado" color="warn">My App</mat-toolbar>
+<h1 class="centro">Dias Inhabiles</h1>
+
+<table class="centroTabla">
+    <tr>
+      <td><h4>Seleccionar el nombre:  </h4></td>
+      <td>
+          <p>
+              <mat-form-field appearance="outline">
+                <input matInput placeholder="Ingrese el nombre">
+                <mat-icon matSuffix>search</mat-icon>
+              </mat-form-field>
+            </p>
+      </td>
+    </tr>
+  </table > 
+
+  <button mat-icon-button color="warn">
+      <mat-icon>edit</mat-icon>  
+  </button>
+
+  <button mat-icon-button color="warn">
+      <mat-icon>delete_forever</mat-icon>  
+  </button>
+
+  <button mat-icon-button color="warn">
+      <mat-icon>pageview</mat-icon>  
+  </button>
+
+<form width="10px" height="10px" class="example-form">
+  <p>
+      <mat-form-field width="10px" height="10px" appearance="outline">
+        <input matInput placeholder="Ingrese el nombre">
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+    </p>
+</form>
+
+<table width="80%" mat-table [dataSource]="dataSource" class="centroTabla">
+
+  <!-- Checkbox Column -->
+  <ng-container matColumnDef="select">
+    <th mat-header-cell *matHeaderCellDef>
+      <mat-checkbox (change)="$event ? masterToggle() : null"
+                    [checked]="selection.hasValue() && isAllSelected()"
+                    [indeterminate]="selection.hasValue() && !isAllSelected()"
+                    [aria-label]="checkboxLabel()">
+      </mat-checkbox>
+    </th>
+    <td mat-cell *matCellDef="let row">
+      <mat-checkbox (click)="$event.stopPropagation()"
+                    (change)="$event ? selection.toggle(row) : null"
+                    [checked]="selection.isSelected(row)"
+                    [aria-label]="checkboxLabel(row)">
+      </mat-checkbox>
+    </td>
+  </ng-container>
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="codigo">
+    <th mat-header-cell *matHeaderCellDef> Codigo </th>
+    <td mat-cell *matCellDef="let element"> {{element.codigo}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="descripcion">
+    <th mat-header-cell *matHeaderCellDef> Descripcion </th>
+    <td mat-cell *matCellDef="let element"> {{element.descripcion}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+      (click)="selection.toggle(row)">
+  </tr>
+</table>
+  <br>
+  <br>
+<button mat-raised-button (click)="openDialog()">Pick one</button>
+
+<button mat-icon-button color="warn">
+<mat-icon>keyboard_backspace</mat-icon>  
+</button>
+
+<button mat-icon-button color="warn">
+    <mat-icon>meeting_room</mat-icon>  
+    </button>
+
+<button mat-icon-button color="warn">
+  <mat-icon>subdirectory_arrow_left</mat-icon>  
+</button>
+
+<button mat-icon-button color="warn">
+    <mat-icon>error</mat-icon>  
+    </button>
+
+<button mat-icon-button color="warn">
+<mat-icon>table_chart</mat-icon>  
+</button>
+
+<button mat-icon-button color="warn">
+<mat-icon>view_compact</mat-icon>  
+</button>
+
+<button mat-icon-button color="warn">
+    <mat-icon>live_help</mat-icon>  
+</button>
