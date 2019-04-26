@@ -21,10 +21,7 @@ import {
     MatChipsModule,
     MatDatepickerModule,
     MatRadioModule,    
-    MatRippleModule
-    MatDialogModule,
-    MatRadioModule,
-    MatSidenavModule,
+    MatRippleModule,
     MatPaginatorModule,
     MatMenuModule,
     MatSelectModule
@@ -52,7 +49,7 @@ import {
         MatChipsModule,
         MatDatepickerModule,
         MatRadioModule,
-        MatRippleModule
+        MatRippleModule,
         MatDialogModule,
         MatRadioModule,
         MatSidenavModule,
@@ -81,7 +78,7 @@ import {
         MatChipsModule,
         MatDatepickerModule,
         MatRadioModule,
-        MatRippleModule
+        MatRippleModule,
         MatDialogModule,
         MatRadioModule,
         MatSidenavModule,

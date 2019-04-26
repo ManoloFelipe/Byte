@@ -11,8 +11,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UbicacionGarantiaComponent, DialogOverviewExampleDialog } from './components/ubicacion-garantia/ubicacion-garantia.component';
 import { HomeComponent } from './components/home/home.component';
-
-import { CategoriasSIBComponent, DailogAgregarCategoriaSIB,DailogEliminarCategoriaSIB,DailogEditarCategoriaSIB,} from './components/categorias-sib/categorias-sib.component';
 import { AgrupacionCreditosComponent } from './components/agrupacion-creditos/agrupacion-creditos.component';
 import { AcercamientosComponent, CrearAcercamiento } from './components/acercamientos/acercamientos.component';
 import { AlmacenadoraComponent } from './components/almacenadora/almacenadora.component';
@@ -50,14 +48,6 @@ import { MontosPlazoComponent, DailogAgregarMontosPlazo, DailogEditarMontosPlazo
 import { DefinirCategoriaUsuarioComponent,DailogAgregarCategoriaUsuario,DailogEliminarCategoriaUsuario,DailogEditarCategoriaUsuario } from './components/definir-categoria-usuario/definir-categoria-usuario.component';
 import { FormsModule } from '@angular/forms';
 import { MatRippleModule } from '@angular/material';
-
-
-
-import { UbicacionGarantiaComponent } from './components/ubicacion-garantia/ubicacion-garantia.component';
-import { CategoriasSIBComponent } from './components/categorias-sib/categorias-sib.component';
-import { AcercamientosComponent, CrearAcercamiento } from './components/acercamientos/acercamientos.component';
-import { AsesoresPrestamoComponent, CrearAsesoresPrestamos } from './components/asesores-prestamo/asesores-prestamo.component';
-import { TiposDeduccionesComponent, CrearTiposDeducciones } from './components/tipos-deducciones/tipos-deducciones.component';
 import { ProductosComponent, CrearProducto } from './components/productos/productos.component';
 import { DatosGeneralesComponet, DialogG, DialogE, DialogN, DialogA } from './components/datos-generales/datos-generales.component';
 
@@ -74,7 +64,6 @@ import { DatosGeneralesComponet, DialogG, DialogE, DialogN, DialogA } from './co
     OrigenFondosComponent,
     FormasPagoComponent,
     DestinosComponent,
-    CategoriasSIBComponent,
     EstatusGarantiaRealComponent,
     EstatusAvaluosComponent,
     IngenierosValuadoresComponent,
@@ -103,9 +92,6 @@ import { DatosGeneralesComponet, DialogG, DialogE, DialogN, DialogA } from './co
     TiposTransaccionesComponent,
     MontosPlazoComponent,
     DefinirCategoriaUsuarioComponent,
-    DailogAgregarCategoriaSIB,
-    DailogEliminarCategoriaSIB,
-    DailogEditarCategoriaSIB,
     DailogAgregarEstatusGarantiaReal,
     DailogEditarEstatusGarantiaReal,
     DailogEliminarEstatusGarantiaReal,
@@ -135,8 +121,7 @@ import { DatosGeneralesComponet, DialogG, DialogE, DialogN, DialogA } from './co
     DailogEliminarMontosPlazo,//------
     DailogAgregarCategoriaUsuario,
     DailogEliminarCategoriaUsuario,
-    DailogEditarCategoriaUsuario
-    CategoriasSIBComponent,
+    DailogEditarCategoriaUsuario,
     AcercamientosComponent,
     AsesoresPrestamoComponent,
     TiposDeduccionesComponent,
@@ -161,9 +146,6 @@ import { DatosGeneralesComponet, DialogG, DialogE, DialogN, DialogA } from './co
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   entryComponents: [    
-    DailogAgregarCategoriaSIB,
-    DailogEditarCategoriaSIB,  
-    DailogEliminarCategoriaSIB,
     DailogAgregarEstatusGarantiaReal,
     DailogEditarEstatusGarantiaReal,
     DailogEliminarEstatusGarantiaReal,
@@ -194,10 +176,7 @@ import { DatosGeneralesComponet, DialogG, DialogE, DialogN, DialogA } from './co
     DailogAgregarCategoriaUsuario,
     DailogEliminarCategoriaUsuario,
     DailogEditarCategoriaUsuario,
-      
-    HomeComponent
-  ],
-  entryComponents: [
+    HomeComponent,
     CrearAcercamiento, 
     CrearAsesoresPrestamos, 
     CrearTiposDeducciones,

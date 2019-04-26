@@ -4,7 +4,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { UbicacionGarantiaComponent } from './components/ubicacion-garantia/ubicacion-garantia.component';
 import { HomeComponent } from './components/home/home.component';
-import { CategoriasSIBComponent } from './components/categorias-sib/categorias-sib.component';
 import { AgrupacionCreditosComponent } from './components/agrupacion-creditos/agrupacion-creditos.component';
 import { AcercamientosComponent } from './components/acercamientos/acercamientos.component';
 import { AlmacenadoraComponent } from './components/almacenadora/almacenadora.component';
@@ -40,6 +39,7 @@ import { OrigenFondosComponent } from './components/origen-fondos/origen-fondos.
 import { MediosContactoComponent } from './components/medios-contacto/medios-contacto.component';
 import { MontosPlazoComponent } from './components/montos-plazo/montos-plazo.component';
 import { DefinirCategoriaUsuarioComponent } from './components/definir-categoria-usuario/definir-categoria-usuario.component';
+import { ProductosComponent } from './components/productos/productos.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -54,7 +54,6 @@ const routes: Routes = [
     {path: 'formasPago', component: FormasPagoComponent},
     {path: 'destinos', component: DestinosComponent},
   //9-12
-    {path: 'categoriasSIB', component: CategoriasSIBComponent},
     {path: 'estatusGarantiaReal', component: EstatusGarantiaRealComponent},
     {path: 'estatusAvaluos', component: EstatusAvaluosComponent},
     {path: 'ingenierosValuadores', component: IngenierosValuadoresComponent},
@@ -74,7 +73,7 @@ const routes: Routes = [
     {path: 'canalesVenta', component: CanalesVentaComponent},
     {path: 'tiposCanalesDistribucion', component: TiposCanalesDistribucionComponent},
   //25-58
-    {path: 'acercamiento', component: AcercamientosComponent},
+    {path: 'acercamientos', component: AcercamientosComponent},
     {path: 'acesoresPrestamos', component: AsesoresPrestamoComponent},
     {path: 'bancos', component: BancosComponent},
     {path: 'tiposDeducciones', component: TiposDeduccionesComponent},
@@ -92,6 +91,7 @@ const routes: Routes = [
     {path: 'parametrizacionNumeroPrestamo', component: ParametrizacionNumeroPrestamoComponent},
     {path: 'pasosCierre', component: PasosCierreComponent},  
     {path: 'tiposTransacciones', component: TiposTransaccionesComponent},
+    {path: 'productos', component: ProductosComponent},
     
   
     {path: '**', component: HomeComponent}
