@@ -19,7 +19,7 @@
   
 <div id="nameformdiv" class="no" >
   <mat-form-field class="example-full-width">
-      <input matInput placeholder="¿Qué quiere buscar?">
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="¿Qué quiere buscar?">
   </mat-form-field>
 </div>
 </div>

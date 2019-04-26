@@ -75,6 +75,10 @@ export class AsesoresPrestamoComponent implements OnInit {
     return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.number + 1}`;
   }
 
+  applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
 } 
 //----------------------------------------- COMPONENTE DEL DIALOG --------------------------------------- 
 

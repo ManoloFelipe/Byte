@@ -90,6 +90,12 @@ export class AcercamientosComponent implements OnInit {
       document.getElementById(id).className='no';
     }
   }
+
+  applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+
 }
 //----------------------------------------- COMPONENTE DEL DIALOG --------------------------------------- 
 export interface DialogData {

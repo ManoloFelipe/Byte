@@ -77,6 +77,10 @@ export class TiposDeduccionesComponent implements OnInit {
 
   }
 
+  applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
 } 
 //----------------------------------------- COMPONENTE DEL DIALOG --------------------------------------- 
 
