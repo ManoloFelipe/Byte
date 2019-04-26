@@ -22,7 +22,12 @@ import {
     MatDatepickerModule,
     MatRadioModule,    
     MatRippleModule
-
+    MatDialogModule,
+    MatRadioModule,
+    MatSidenavModule,
+    MatPaginatorModule,
+    MatMenuModule,
+    MatSelectModule
 } from '@angular/material'
 
 @NgModule({
@@ -48,6 +53,12 @@ import {
         MatDatepickerModule,
         MatRadioModule,
         MatRippleModule
+        MatDialogModule,
+        MatRadioModule,
+        MatSidenavModule,
+        MatPaginatorModule,
+        MatMenuModule,
+        MatSelectModule
     ],
     exports:[
         MatButtonModule,
@@ -71,6 +82,12 @@ import {
         MatDatepickerModule,
         MatRadioModule,
         MatRippleModule
+        MatDialogModule,
+        MatRadioModule,
+        MatSidenavModule,
+        MatPaginatorModule,
+        MatMenuModule,
+        MatSelectModule
     ]
 })
 

@@ -8,10 +8,6 @@
     right: 0;
   }
 
-  .example-toolbar{
-    color: #5F6A6A;
-  }
-
   .example-container {
     position: absolute;
     top: 0;
@@ -41,13 +37,25 @@
 
 .buttons{
   margin: 0 auto; 
-  width: 300px;
+  width: 245px;
   padding: 25px 0;
 }
 
-.a{
-  margin-left: 10px
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
 }
-#MatCard{
-  color: #273746 
+
+.sidenav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.no {
+display:none;
+}
+.si {
+display:block;
 }

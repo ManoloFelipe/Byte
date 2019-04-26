@@ -4,6 +4,7 @@ import {MatTableDataSource} from '@angular/material';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 
 export interface PeriodicElement {
+
   name: string;
   position: number;
   weight: number;
@@ -21,6 +22,21 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
   {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
   {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
+  description: string;
+  number: number;
+}
+
+const ELEMENT_DATA: PeriodicElement[] = [
+  {number: 1, description: 'Hydrogen'},
+  {number: 2, description: 'Helium'},
+  {number: 3, description: 'Lithium'},
+  {number: 4, description: 'Beryllium'},
+  {number: 5, description: 'Boron'},
+  {number: 6, description: 'Carbon'},
+  {number: 7, description: 'Nitrogen'},
+  {number: 8, description: 'Oxygen'},
+  {number: 9, description: 'Fluorine'},
+  {number: 10, description: 'Neon'},
 ];
 
 @Component({
@@ -51,7 +67,8 @@ export class TiposDeduccionesComponent implements OnInit {
   ngOnInit() {
   }
 
-  displayedColumns: string[] = ['select', 'position', 'name', 'weight', 'symbol'];
+ displayedColumns: string[] = ['select', 'number', 'description'];
+
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   selection = new SelectionModel<PeriodicElement>(true, []);
 
@@ -75,6 +92,7 @@ export class TiposDeduccionesComponent implements OnInit {
       return `${this.isAllSelected() ? 'select' : 'deselect'} all`;
     }
     return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.position + 1}`;
+
   }
 
 } 

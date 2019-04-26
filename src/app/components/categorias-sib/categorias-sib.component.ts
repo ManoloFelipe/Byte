@@ -48,6 +48,7 @@ export class CategoriasSIBComponent implements OnInit {
     const dialogRef = this.dialog.open(DailogEliminarCategoriaSIB, {
       width: '500px',
       data: {codigo: this.codigo, descripcion: this.descripcion}
+
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -79,7 +80,7 @@ export class CategoriasSIBComponent implements OnInit {
   isAllSelected() {
     const numSelected = this.selection.selected.length;
     const numRows = this.dataSource.data.length;
-    return numSelected === numRows;
+    return numSelected === numRows; 
   }
 
   /** Selects all rows if they are not all selected; otherwise clear selection. */
@@ -98,10 +99,18 @@ export class CategoriasSIBComponent implements OnInit {
   }
 
 }
+//----------------------------------------- COMPONENTE DEL DIALOG --------------------------------------- 
+
+export interface DialogData {
+  animal: string;
+  names: string;
+}
 
 @Component({
   selector: 'dialog-overview-example-dialog',
+
   templateUrl: './agregar-categoria-sib.component.html',
+
   styleUrls: ['./categorias-sib.component.css']
 })
 export class DailogAgregarCategoriaSIB {
