@@ -92,6 +92,7 @@ const routes: Routes = [
     {path: 'pasosCierre', component: PasosCierreComponent},  
     {path: 'tiposTransacciones', component: TiposTransaccionesComponent},
     {path: 'productos', component: ProductosComponent},
+    {path: 'bancos', component: BancosComponent},
     
   
     {path: '**', component: HomeComponent}

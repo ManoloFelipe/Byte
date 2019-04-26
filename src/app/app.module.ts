@@ -17,7 +17,7 @@ import { AlmacenadoraComponent } from './components/almacenadora/almacenadora.co
 import { ArchivosLimpiezaComponent } from './components/archivos-limpieza/archivos-limpieza.component';
 import { AseguradorasComponent } from './components/aseguradoras/aseguradoras.component';
 import { AsesoresPrestamoComponent,CrearAsesoresPrestamos } from './components/asesores-prestamo/asesores-prestamo.component';
-import { BancosComponent } from './components/bancos/bancos.component';
+import { BancosComponent, CrearBancos } from './components/bancos/bancos.component';
 import { CanalesVentaComponent,DialogCanal } from './components/canales-venta/canales-venta.component';
 import { CobrosAdicionalesComponent, DialogCobroAdicional} from './components/cobros-adicionales/cobros-adicionales.component';
 import { DestinosComponent, DialogDestinos } from './components/destinos/destinos.component';
@@ -134,7 +134,8 @@ import { DatosGeneralesComponet, DialogG, DialogE, DialogN, DialogA } from './co
     DialogG,
     DialogE,
     DialogN,
-    DialogA
+    DialogA,
+    CrearBancos
   ],
   imports: [
     BrowserModule,
@@ -184,7 +185,9 @@ import { DatosGeneralesComponet, DialogG, DialogE, DialogN, DialogA } from './co
     DialogG,
     DialogE,
     DialogN,
-    DialogA],
+    DialogA,
+    CrearBancos
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

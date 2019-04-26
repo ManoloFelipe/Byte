@@ -83,6 +83,9 @@ export class ProductosComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
   }
 
+  applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
 
   muestra(id){
     if(id.className=='no'){
