@@ -16,7 +16,7 @@ export class HomeComponent implements OnDestroy {
 
   // fillerNav = Array.from({length: 100}, (_, i) => `Nav Item ${i + 1}`);
 
-  fillerContent = Array.from({length: 100}, () =>
+  fillerContent = Array.from({length: 1}, () =>
       `  Somos una empresa que provee soluciones de software de clase mundial. Aseguramos nuestro firme 
         compromiso con los clientes, colaboradores y accionistas, buscando constantemente los más altos 
         estándares de calidad; producto de la innovación y madurez en nuestros procesos y productos.

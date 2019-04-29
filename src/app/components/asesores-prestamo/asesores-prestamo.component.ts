@@ -1,7 +1,8 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, ViewChild } from '@angular/core';
 import {SelectionModel} from '@angular/cdk/collections';
-import {MatTableDataSource} from '@angular/material';
+import {MatTableDataSource, MatPaginator} from '@angular/material';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import { FormControl } from '@angular/forms';
 
 export interface PeriodicElement {
   description: string;
@@ -28,8 +29,13 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class AsesoresPrestamoComponent implements OnInit {
 
+  mode = new FormControl('over');
+  shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
   animal: string;
   names: string;
+  timeLeft: number;
+  interval;
+  mostrar: Boolean;
 
   constructor(public dialog: MatDialog) {}
 
@@ -47,6 +53,7 @@ export class AsesoresPrestamoComponent implements OnInit {
 
 
   ngOnInit() {
+    this.dataSource.paginator = this.paginator;
   }
 
   displayedColumns: string[] = ['select', 'number', 'description'];
@@ -74,6 +81,8 @@ export class AsesoresPrestamoComponent implements OnInit {
     }
     return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.number + 1}`;
   }
+
+  @ViewChild(MatPaginator) paginator: MatPaginator;
 
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();

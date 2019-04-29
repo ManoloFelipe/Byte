@@ -37,8 +37,14 @@
 
 .buttons{
   margin: 0 auto; 
-  width: 245px;
-  padding: 25px 0;
+  text-align: center;
+  
+}
+
+.buttons button{
+  color: white;
+  background:#5F6A6A;
+  margin-left: 25px;
 }
 
 .mat-radio-button ~ .mat-radio-button {

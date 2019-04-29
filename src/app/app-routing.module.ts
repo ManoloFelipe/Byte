@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { UbicacionGarantiaComponent } from './components/ubicacion-garantia/ubicacion-garantia.component';
 import { HomeComponent } from './components/home/home.component';
+import { CategoriasSIBComponent } from './components/categorias-sib/categorias-sib.component';
 import { AgrupacionCreditosComponent } from './components/agrupacion-creditos/agrupacion-creditos.component';
 import { AcercamientosComponent } from './components/acercamientos/acercamientos.component';
 import { AlmacenadoraComponent } from './components/almacenadora/almacenadora.component';
@@ -39,7 +40,21 @@ import { OrigenFondosComponent } from './components/origen-fondos/origen-fondos.
 import { MediosContactoComponent } from './components/medios-contacto/medios-contacto.component';
 import { MontosPlazoComponent } from './components/montos-plazo/montos-plazo.component';
 import { DefinirCategoriaUsuarioComponent } from './components/definir-categoria-usuario/definir-categoria-usuario.component';
+import { DatosGeneralesRegistroControlComponent } from './components/datos-generales-registro-control/datos-generales-registro-control.component';
+import { TiposSubtiposGarantiasRealesComponent } from './components/tipos-subtipos-garantias-reales/tipos-subtipos-garantias-reales.component';
+import { EstadosPrestamosComponent } from './components/estados-prestamos/estados-prestamos.component';
+import { LimpiezaArchivosComponent } from './components/limpieza-archivos/limpieza-archivos.component';
+import { ConsultasComponent } from './components/consultas/consultas.component';
 import { ProductosComponent } from './components/productos/productos.component';
+import { ClasificacionComponent } from './components/clasificacion/clasificacion.component';
+import { ParametrosAdicionalesProductosComponent } from './components/parametros-adicionales-producto/parametros-adicionales-productos.component';
+import { EventosSolicitudesComponent } from './components/eventos-solicitudes/eventos-solicitudes.component';
+import { DocumentosProductoComponent } from './components/documentos-producto/documentos-producto.component';
+import { PorcentajeFinanciamientoComponent } from './components/porcentaje-financiamiento/porcentaje-financiamiento.component';
+import { RangoPlazoInteresComponent } from './components/rango-plazo-interes/rango-plazo-interes.component';
+import { AsignacionCategoriaComponent } from './components/asignacion-categoria/asignacion-categoria.component';
+import { CopiarParametrosProductosComponent } from './components/Copiar-Parametros-de-Productos/Copiar-parametros-de-Productos.component';
+import { Estatuslegalescomponent } from './components/estatus-legales/estatus-legales.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -54,13 +69,14 @@ const routes: Routes = [
     {path: 'formasPago', component: FormasPagoComponent},
     {path: 'destinos', component: DestinosComponent},
   //9-12
+    {path: 'categoriasSIB', component: CategoriasSIBComponent},
     {path: 'estatusGarantiaReal', component: EstatusGarantiaRealComponent},
     {path: 'estatusAvaluos', component: EstatusAvaluosComponent},
     {path: 'ingenierosValuadores', component: IngenierosValuadoresComponent},
   //13-16
     {path: 'notarios', component: NotariosComponent},
     {path: 'motivosAjuste', component: MotivosAjustesComponent},
-    {path: 'diasInhabilies', component: DiasInhabilesComponent},
+    {path: 'diasInhabiles', component: DiasInhabilesComponent},
     {path: 'cobrosAdicionales', component: CobrosAdicionalesComponent},
   //17-20
     {path: 'institucionesCobroAdicional', component: InstitucionesCobrosAdicionalesComponent},
@@ -78,23 +94,49 @@ const routes: Routes = [
     {path: 'bancos', component: BancosComponent},
     {path: 'tiposDeducciones', component: TiposDeduccionesComponent},
 
-  //46-49
-    {path: 'montosPlazo', component: MontosPlazoComponent},
-    {path: 'definirCategoriaUsuario', component: DefinirCategoriaUsuarioComponent},
   //----------------------------------------------------------------------------------------------------
   //----------------------------------------- ENTREGA 2 -------------------------------------------------
-    {path: 'tiposPresatmos', component: TiposPrestamosComponent},
-    {path: 'archivosLimpieza', component: ArchivosLimpiezaComponent},
-    {path: 'frecuenciasAmortizacion', component: FrecuenciasAmortizacionComponent},
-    {path: 'garantiasContables', component: GarantiasContablesComponent},
-    {path: 'Home', component: HomeComponent},  
-    {path: 'parametrizacionNumeroPrestamo', component: ParametrizacionNumeroPrestamoComponent},
-    {path: 'pasosCierre', component: PasosCierreComponent},  
+
+  //29-32
+    {path: 'tiposPrestamos', component: TiposPrestamosComponent},
+    {path: 'datosGeneralesRC', component: DatosGeneralesRegistroControlComponent},
     {path: 'tiposTransacciones', component: TiposTransaccionesComponent},
-    {path: 'productos', component: ProductosComponent},
-    {path: 'bancos', component: BancosComponent},
-    
+    {path: 'garantiasContables', component: GarantiasContablesComponent},
   
+  //33-36
+    {path: 'tiposSubtiposGarantiasRealas', component: TiposSubtiposGarantiasRealesComponent},
+    {path: 'frecuenciasAmortizacion', component: FrecuenciasAmortizacionComponent},
+    {path: 'estadosPrestamos', component: EstadosPrestamosComponent},
+    {path: 'parametrizacionNumeroPrestamo', component: ParametrizacionNumeroPrestamoComponent},
+  
+  //37-39 y 41
+    {path: 'pasosCierre', component: PasosCierreComponent}, 
+    {path: 'archivosLimpieza', component: ArchivosLimpiezaComponent},
+    {path: 'limpiezaArchivos', component: LimpiezaArchivosComponent},
+    {path: 'consultas', component: ConsultasComponent},
+
+  //40
+    {path: 'productos', component: ProductosComponent},
+
+  //42-45
+    {path: 'clasificacion', component: ClasificacionComponent},
+    {path: 'parametrosAdicionalesProductos', component: ParametrosAdicionalesProductosComponent},
+    {path: 'eventosSolicitudes', component: EventosSolicitudesComponent},
+    {path: 'documentosProducto', component: DocumentosProductoComponent},
+
+  //46-49
+    {path: 'montosPlazo', component: MontosPlazoComponent},
+    {path: 'porcentajeFinanciamiento', component: PorcentajeFinanciamientoComponent},
+    {path: 'rangoPlazosInteres', component: RangoPlazoInteresComponent},
+    {path: 'definirCategoriaUsuario', component: DefinirCategoriaUsuarioComponent},
+
+  //50-53
+    {path: 'asignacionCategorias', component: AsignacionCategoriaComponent},  
+    {path: 'copiarParametrosProductos', component: CopiarParametrosProductosComponent},  
+    {path: 'estatusLegales', component: Estatuslegalescomponent},
+    {path: 'Home', component: HomeComponent},  
+    
+
     {path: '**', component: HomeComponent}
 
 ];

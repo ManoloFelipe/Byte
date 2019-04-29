@@ -34,6 +34,9 @@ export class AcercamientosComponent implements OnInit {
   shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
   animal: string;
   names: string;
+  timeLeft: number;
+  interval;
+  mostrar: Boolean;
 
   constructor(public dialog: MatDialog) {}
 
@@ -83,19 +86,10 @@ export class AcercamientosComponent implements OnInit {
   }
 
 
-  muestra(id){
-    if(id.className=='no'){
-    document.getElementById(id).className='si';
-    }else{
-      document.getElementById(id).className='no';
-    }
-  }
 
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
-
-
 }
 //----------------------------------------- COMPONENTE DEL DIALOG --------------------------------------- 
 export interface DialogData {

@@ -17,6 +17,17 @@
     background: #eee;
   }
 
+  .buttons{
+    margin: 0 auto; 
+    text-align: center;
+    
+  }
+  
+  .buttons button{
+    color: white;
+    background:#5F6A6A;
+    margin-left: 25px;
+  }
   .example-form {
     min-width: 150px;
     max-width: 500px;
@@ -35,11 +46,6 @@
     margin:0 auto;
   }
 
-.buttons{
-  margin: 0 auto; 
-  width: 245px;
-  padding: 25px 0;
-}
 
 
 .no {
