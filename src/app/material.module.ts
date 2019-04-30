@@ -1,4 +1,4 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
+import { NgModule } from '@angular/core';
 
 import {
     MatButtonModule,
@@ -24,8 +24,7 @@ import {
     MatRippleModule,
     MatMenuModule,
     MatSelectModule,
-    MatPaginatorModule,
-    MatNativeDateModule, 
+    MatPaginatorModule
 
 } from '@angular/material'
 
@@ -54,8 +53,7 @@ import {
         MatRippleModule,
         MatMenuModule,
         MatSelectModule,
-        MatPaginatorModule,
-        MatNativeDateModule, 
+        MatPaginatorModule
     ],
     exports:[
         MatButtonModule,
@@ -81,10 +79,8 @@ import {
         MatRippleModule,
         MatMenuModule,
         MatSelectModule,
-        MatPaginatorModule,
-        MatNativeDateModule, 
-    ],
-    schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+        MatPaginatorModule
+    ]
 })
 
 export class MetarialModule {}

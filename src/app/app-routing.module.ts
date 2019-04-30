@@ -89,7 +89,7 @@ const routes: Routes = [
     {path: 'canalesVenta', component: CanalesVentaComponent},
     {path: 'tiposCanalesDistribucion', component: TiposCanalesDistribucionComponent},
   //25-58
-    {path: 'acercamientos', component: AcercamientosComponent},
+    {path: 'acercamiento', component: AcercamientosComponent},
     {path: 'acesoresPrestamos', component: AsesoresPrestamoComponent},
     {path: 'bancos', component: BancosComponent},
     {path: 'tiposDeducciones', component: TiposDeduccionesComponent},

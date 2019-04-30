@@ -87,12 +87,40 @@ export class BancosComponent implements OnInit {
   }
 
 
-  muestra(id){
-    if(id.className=='no'){
-    document.getElementById(id).className='si';
-    }else{
-      document.getElementById(id).className='no';
-    }
+  eliminar(): void {
+    const dialogRef = this.dialog.open(EliminarBancos, {
+      width: '300px',      
+      data: {names: this.names, animal: this.animal}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.animal = result;
+    });
+  }
+
+  editar(): void {
+    const dialogRef = this.dialog.open(EditarBancos, {
+      width: '300px',      
+      data: {names: this.names, animal: this.animal}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.animal = result;
+    });
+  }
+
+  siguienteParte(): void {
+    const dialogRef = this.dialog.open(InformacionBancos, {
+      width: '300px',      
+      data: {names: this.names, animal: this.animal}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.animal = result;
+    });
   }
 }
 //----------------------------------------- COMPONENTE DEL DIALOG --------------------------------------- 
@@ -117,4 +145,51 @@ export class CrearBancos {
   }
 
 }
+//------------------------------
+@Component({
+  selector: 'dialog-overview-example-dialog',
+  templateUrl: 'eliminar-bancos.component.html',
+  styleUrls: ['./bancos.component.css']
+})
+export class EliminarBancos {
 
+  constructor(
+    public dialogRef: MatDialogRef<EliminarBancos>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+}
+//------------------------------
+@Component({
+  selector: 'dialog-overview-example-dialog',
+  templateUrl: 'editar-bancos.component.html',
+  styleUrls: ['./bancos.component.css']
+})
+export class EditarBancos {
+
+  constructor(
+    public dialogRef: MatDialogRef<EditarBancos>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+}
+//------------------------------
+@Component({
+  selector: 'dialog-overview-example-dialog',
+  templateUrl: 'editar-bancos.component.html',
+  styleUrls: ['./bancos.component.css']
+})
+export class InformacionBancos {
+
+  constructor(
+    public dialogRef: MatDialogRef<InformacionBancos>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+}

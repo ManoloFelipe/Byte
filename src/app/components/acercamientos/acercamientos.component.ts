@@ -90,6 +90,30 @@ export class AcercamientosComponent implements OnInit {
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
+
+  eliminar(): void {
+    const dialogRef = this.dialog.open(EliminarAcercamientos, {
+      width: '300px',      
+      data: {names: this.names, animal: this.animal}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.animal = result;
+    });
+  }
+
+  editar(): void {
+    const dialogRef = this.dialog.open(EditarAcercamientos, {
+      width: '300px',      
+      data: {names: this.names, animal: this.animal}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.animal = result;
+    });
+  }
 }
 //----------------------------------------- COMPONENTE DEL DIALOG --------------------------------------- 
 export interface DialogData {
@@ -111,6 +135,36 @@ export class CrearAcercamiento {
   onNoClick(): void {
     this.dialogRef.close();
   }
-
 }
+//------------------------------
+@Component({
+  selector: 'dialog-overview-example-dialog',
+  templateUrl: 'eliminar-acercamientos.component.html',
+  styleUrls: ['./acercamientos.component.css']
+})
+export class EliminarAcercamientos {
 
+  constructor(
+    public dialogRef: MatDialogRef<EliminarAcercamientos>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+}
+//------------------------------
+@Component({
+  selector: 'dialog-overview-example-dialog',
+  templateUrl: 'editar-acercamientos.component.html',
+  styleUrls: ['./acercamientos.component.css']
+})
+export class EditarAcercamientos {
+
+  constructor(
+    public dialogRef: MatDialogRef<EditarAcercamientos>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+}

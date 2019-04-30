@@ -13,7 +13,7 @@ import { UbicacionGarantiaComponent, DialogOverviewExampleDialog } from './compo
 import { HomeComponent } from './components/home/home.component';
 import { CategoriasSIBComponent, DailogAgregarCategoriaSIB,DailogEliminarCategoriaSIB,DailogEditarCategoriaSIB,} from './components/categorias-sib/categorias-sib.component';
 import { AgrupacionCreditosComponent } from './components/agrupacion-creditos/agrupacion-creditos.component';
-import { AcercamientosComponent, CrearAcercamiento } from './components/acercamientos/acercamientos.component';
+import { AcercamientosComponent, CrearAcercamiento, EditarAcercamientos, EliminarAcercamientos } from './components/acercamientos/acercamientos.component';
 import { AlmacenadoraComponent } from './components/almacenadora/almacenadora.component';
 import { ArchivosLimpiezaComponent, DialogLimpieza } from './components/archivos-limpieza/archivos-limpieza.component';
 import { AseguradorasComponent } from './components/aseguradoras/aseguradoras.component';
@@ -179,7 +179,9 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     dialogCopiarParametros,
     dialogEstatusLegales,
     CrearBancos,
-    SidenavComponent
+    SidenavComponent,
+    EditarAcercamientos,
+    EliminarAcercamientos
   ],
   imports: [
     BrowserModule,
@@ -246,8 +248,8 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     dialogCopiarParametros,
     dialogEstatusLegales,
     CrearBancos,
-
-
+    EditarAcercamientos,
+    EliminarAcercamientos,
     HomeComponent
   ],
   providers: [],

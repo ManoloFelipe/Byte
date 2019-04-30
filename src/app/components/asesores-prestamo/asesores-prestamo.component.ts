@@ -88,6 +88,29 @@ export class AsesoresPrestamoComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
+  eliminar(): void {
+    const dialogRef = this.dialog.open(EliminarAsesoresPrestamos, {
+      width: '300px',      
+      data: {names: this.names, animal: this.animal}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.animal = result;
+    });
+  }
+
+  editar(): void {
+    const dialogRef = this.dialog.open(EditarAsesoresPrestamos, {
+      width: '300px',      
+      data: {names: this.names, animal: this.animal}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.animal = result;
+    });
+  }
 } 
 //----------------------------------------- COMPONENTE DEL DIALOG --------------------------------------- 
 
@@ -111,4 +134,36 @@ export class CrearAsesoresPrestamos {
     this.dialogRef.close();
   }
 
+}
+//------------------------------
+@Component({
+  selector: 'dialog-overview-example-dialog',
+  templateUrl: 'eliminar-asesores-prestamo.component.html',
+  styleUrls: ['./asesores-prestamo.component.css']
+})
+export class EliminarAsesoresPrestamos {
+
+  constructor(
+    public dialogRef: MatDialogRef<EliminarAsesoresPrestamos>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+}
+//------------------------------
+@Component({
+  selector: 'dialog-overview-example-dialog',
+  templateUrl: 'editar-asesores-prestamo.component.html',
+  styleUrls: ['./asesores-prestamo.component.css']
+})
+export class EditarAsesoresPrestamos {
+
+  constructor(
+    public dialogRef: MatDialogRef<EditarAsesoresPrestamos>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
 }
