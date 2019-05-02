@@ -1,24 +1,31 @@
-
-<div class="barra-nav">
-  <mat-toolbar color="primary" class="example-toolbar">
-    <span>My Application</span>
-    <span style="flex: 1 1 auto"></span>
-    <button mat-button [matMenuTriggerFor]="productos" mat-stroked-button	>Productos</button>
+<div class="buttons">
+<h1 >Productos</h1>
+</div>
+<hr>
+<br>
+<button mat-button [matMenuTriggerFor]="productos" style="left:10%" mat-stroked-button	>Productos</button>
 <mat-menu #productos="matMenu">
   <button mat-menu-item [matMenuTriggerFor]="subproductos">Sub-Productos</button>
+  <button mat-menu-item >Deducciones</button>
+  <button mat-menu-item >Prioridad</button>
+  <button mat-menu-item >Retenciones</button>
+  <button mat-menu-item [matMenuTriggerFor]="secuencia">Secuencia</button> 
 </mat-menu>
 
 <mat-menu #subproductos="matMenu">
-  <button mat-menu-item>Sub-Productos</button>
-  <button mat-menu-item>Deducciones</button>
-  <button mat-menu-item>Prioridad</button>
-  <button mat-menu-item>Retenciones</button>
-  <button mat-menu-item>Secuencia</button> 
+  <button mat-menu-item>Tasa de Interes</button>
+  <button mat-menu-item>Recargo por Morosidad</button>
+  <button mat-menu-item>Identificadores Generales</button>
+  <button mat-menu-item>Identificadores Cuota Nivelada</button>
+  <button mat-menu-item>Identificadores de Mora</button> 
+  <button mat-menu-item>Excepciones y Caracteristicas Especiales</button>
 </mat-menu>
-  </mat-toolbar>
-</div>
 
-<div style="padding: 20px; margin-top: 5%"></div>
+<mat-menu #secuencia="matMenu">
+    <button mat-menu-item>Creditos</button>
+    <button mat-menu-item>Solicitudes</button>  
+</mat-menu>
+<br>
 
 <div class="buttons">
   <button mat-icon-button color="primary" onclick="javascript:nameformdiv.className='si';">
@@ -26,13 +33,13 @@
   </button>
   
 <div id="nameformdiv" class="no" >
-  <mat-form-field class="example-full-width">
+  <mat-form-field style="width: 30%;">
       <input matInput (keyup)="applyFilter($event.target.value)" placeholder="¿Qué quiere buscar?">
   </mat-form-field>
 </div>
 </div>
 
-
+<br>
   
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
@@ -71,6 +78,10 @@
 </tr>
 </table>
 
+
+<mat-paginator [pageSizeOptions]="[5, 10, 20]" class="buttons" showFirstLastButtons style="width:80%"></mat-paginator>
+<br>
+<br>
 <div class="buttons">
   <button mat-icon-button color="primary"  (click)="openDialog()">
       <mat-icon>note_add</mat-icon>
@@ -82,9 +93,5 @@
       <mat-icon>create</mat-icon>
   </button>
 </div>
-
-<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons style="width:90%"></mat-paginator>
-<br>
-<br>
 
 <div>

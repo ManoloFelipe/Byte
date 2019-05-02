@@ -1,6 +1,6 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, ViewChild } from '@angular/core';
 import {SelectionModel} from '@angular/cdk/collections';
-import {MatTableDataSource} from '@angular/material';
+import {MatTableDataSource, MatPaginator} from '@angular/material';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 
 export interface PeriodicElement {
@@ -45,10 +45,6 @@ export class TiposDeduccionesComponent implements OnInit {
     });
   }
 
-
-  ngOnInit() {
-  }
-
  displayedColumns: string[] = ['select', 'number', 'description'];
 
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
@@ -81,6 +77,11 @@ export class TiposDeduccionesComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+
+  ngOnInit() {
+    this.dataSource.paginator = this.paginator;
+  }
 } 
 //----------------------------------------- COMPONENTE DEL DIALOG --------------------------------------- 
 

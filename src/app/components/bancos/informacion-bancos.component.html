@@ -1,0 +1,20 @@
+<form>
+    <br>
+    <label for="company">Compañia: Hydrogen</label>
+    <br>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Correlativo">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Cuenta">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+            <input matInput placeholder="Cuenta contable">
+    </mat-form-field>
+    <br>
+    <br>
+<button mat-button (click)="onNoClick()">Cancel</button>
+<button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Guardar</button>
+</form>

@@ -180,7 +180,7 @@ export class EditarBancos {
 //------------------------------
 @Component({
   selector: 'dialog-overview-example-dialog',
-  templateUrl: 'editar-bancos.component.html',
+  templateUrl: 'informacion-bancos.component.html',
   styleUrls: ['./bancos.component.css']
 })
 export class InformacionBancos {

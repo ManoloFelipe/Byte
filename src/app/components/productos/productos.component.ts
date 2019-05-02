@@ -86,14 +86,6 @@ export class ProductosComponent implements OnInit {
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
-
-  muestra(id){
-    if(id.className=='no'){
-    document.getElementById(id).className='si';
-    }else{
-      document.getElementById(id).className='no';
-    }
-  }
 }
 //----------------------------------------- COMPONENTE DEL DIALOG --------------------------------------- 
 
