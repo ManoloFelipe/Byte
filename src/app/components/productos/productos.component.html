@@ -3,28 +3,8 @@
 </div>
 <hr>
 <br>
-<button mat-button [matMenuTriggerFor]="productos" style="left:10%" mat-stroked-button	>Productos</button>
-<mat-menu #productos="matMenu">
-  <button mat-menu-item [matMenuTriggerFor]="subproductos">Sub-Productos</button>
-  <button mat-menu-item >Deducciones</button>
-  <button mat-menu-item >Prioridad</button>
-  <button mat-menu-item >Retenciones</button>
-  <button mat-menu-item [matMenuTriggerFor]="secuencia">Secuencia</button> 
-</mat-menu>
+<button mat-button href="#subproductosIndex" onclick="javascript:subproductosIndex.className='si'" style="left:10%" mat-stroked-button	>Productos</button>
 
-<mat-menu #subproductos="matMenu">
-  <button mat-menu-item>Tasa de Interes</button>
-  <button mat-menu-item>Recargo por Morosidad</button>
-  <button mat-menu-item>Identificadores Generales</button>
-  <button mat-menu-item>Identificadores Cuota Nivelada</button>
-  <button mat-menu-item>Identificadores de Mora</button> 
-  <button mat-menu-item>Excepciones y Caracteristicas Especiales</button>
-</mat-menu>
-
-<mat-menu #secuencia="matMenu">
-    <button mat-menu-item>Creditos</button>
-    <button mat-menu-item>Solicitudes</button>  
-</mat-menu>
 <br>
 
 <div class="buttons">
@@ -94,4 +74,71 @@
   </button>
 </div>
 
-<div>
+<hr>
+
+<div class="no" id="subproductosIndex">
+    <button mat-button [matMenuTriggerFor]="productos" style="left:10%" mat-stroked-button	>Productos</button>
+    <mat-menu #productos="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="subproductos">Sub-Productos</button>
+      <button mat-menu-item >Deducciones</button>
+      <button mat-menu-item >Prioridad</button>
+      <button mat-menu-item >Retenciones</button>
+      <button mat-menu-item [matMenuTriggerFor]="secuencia">Secuencia</button> 
+    </mat-menu>
+  <div class="buttons">
+    <h1 >Sub-Producto</h1>
+    </div>
+    <hr style="width:90%">
+    <br>
+  <div class="buttons">
+    <div class="buttons">
+      <label mat-button  for="">prueba</label>
+      <input type="text" name="" id="">
+      <br>
+      <label mat-button  for="">prueba</label>
+      <input type="text" name="" id="">
+      <br>
+      <label for="">prueba</label>
+      <input mat-button  type="text" name="" id="">
+      <br>
+      <label for="">prueba</label>
+      <mat-form-field style="width: 30%;">
+          <input matInput (keyup)="applyFilter($event.target.value)" placeholder="¿Qué quiere buscar?">
+      </mat-form-field>
+      <br>
+      <label for="">prueba</label>
+      <mat-form-field style="width: 30%;">
+          <input matInput (keyup)="applyFilter($event.target.value)" placeholder="¿Qué quiere buscar?">
+      </mat-form-field>
+      <br>
+      <label for="">prueba</label>
+      <mat-form-field style="width: 30%;">
+          <input matInput (keyup)="applyFilter($event.target.value)" placeholder="¿Qué quiere buscar?">
+      </mat-form-field>
+      <br>
+      <label for="">prueba</label>
+      <mat-form-field style="width: 30%;">
+          <input matInput (keyup)="applyFilter($event.target.value)" placeholder="¿Qué quiere buscar?">
+      </mat-form-field>
+      <br>
+      <label for="">prueba</label>
+      <mat-form-field style="width: 30%;">
+          <input matInput (keyup)="applyFilter($event.target.value)" placeholder="¿Qué quiere buscar?">
+      </mat-form-field>
+      <br>
+      <label for="">prueba</label>
+      <mat-form-field style="width: 30%;">
+          <input matInput (keyup)="applyFilter($event.target.value)" placeholder="¿Qué quiere buscar?">
+      </mat-form-field>
+      <br>
+      <label for="">prueba</label>
+      <mat-form-field style="width: 30%;">
+          <input matInput (keyup)="applyFilter($event.target.value)" placeholder="¿Qué quiere buscar?">
+      </mat-form-field>
+      <br>
+    </div>
+  </div>
+
+  
+  
+</div>
