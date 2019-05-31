@@ -24,7 +24,8 @@ import {
     MatRippleModule,
     MatMenuModule,
     MatSelectModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    
 
 } from '@angular/material'
 
@@ -53,7 +54,8 @@ import {
         MatRippleModule,
         MatMenuModule,
         MatSelectModule,
-        MatPaginatorModule
+        MatPaginatorModule,
+        MatGridListModule
     ],
     exports:[
         MatButtonModule,
@@ -79,7 +81,8 @@ import {
         MatRippleModule,
         MatMenuModule,
         MatSelectModule,
-        MatPaginatorModule
+        MatPaginatorModule,
+        MatGridListModule
     ]
 })
 

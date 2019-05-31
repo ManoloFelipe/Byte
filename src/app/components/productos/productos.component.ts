@@ -49,6 +49,30 @@ export class ProductosComponent implements OnInit {
     });
   }
 
+  editar(): void {
+    const dialogRef = this.dialog.open(EditarProducto, {
+      width: '300px',      
+      data: {names: this.names, animal: this.animal}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.animal = result;
+    });
+  }
+
+  eliminar(): void {
+    const dialogRef = this.dialog.open(EliminarProducto, {
+      width: '300px',      
+      data: {names: this.names, animal: this.animal}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.animal = result;
+    });
+  }
+
 
   displayedColumns: string[] = ['select', 'number', 'description'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
@@ -103,6 +127,50 @@ export class CrearProducto {
 
   constructor(
     public dialogRef: MatDialogRef<CrearProducto>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
+}
+
+export interface DialogData {
+  animal: string;
+  names: string;
+}
+
+@Component({
+  selector: 'dialog-overview-example-dialog',
+  templateUrl: 'editar-productos.component.html',
+  styleUrls: ['./productos.component.css']
+})
+export class EditarProducto {
+
+  constructor(
+    public dialogRef: MatDialogRef<EditarProducto>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
+}
+
+export interface DialogData {
+  animal: string;
+  names: string;
+}
+
+@Component({
+  selector: 'dialog-overview-example-dialog',
+  templateUrl: 'eliminar-productos.component.html',
+  styleUrls: ['./productos.component.css']
+})
+export class EliminarProducto {
+
+  constructor(
+    public dialogRef: MatDialogRef<EliminarProducto>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
 
   onNoClick(): void {

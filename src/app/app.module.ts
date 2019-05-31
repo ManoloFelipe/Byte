@@ -52,7 +52,7 @@ import { DatosGeneralesRegistroControlComponent } from './components/datos-gener
 import { TiposSubtiposGarantiasRealesComponent, DialogTiposSubtiposAgregar, DialogTiposSubtiposAgregarCheck, TiposSubtiposGarantiasCheckAgregar } from './components/tipos-subtipos-garantias-reales/tipos-subtipos-garantias-reales.component';
 import { EstadosPrestamosComponent } from './components/estados-prestamos/estados-prestamos.component';
 import { ConsultasComponent, DialogConsultas } from './components/consultas/consultas.component';
-import { ProductosComponent, CrearProducto } from './components/productos/productos.component';
+import { ProductosComponent, CrearProducto, EditarProducto, EliminarProducto } from './components/productos/productos.component';
 import { ClasificacionComponent, DialogClasificacion } from './components/clasificacion/clasificacion.component';
 import { ParametrosAdicionalesProductosComponent } from './components/parametros-adicionales-producto/parametros-adicionales-productos.component';
 import { EventosSolicitudesComponent, DialogEvento } from './components/eventos-solicitudes/eventos-solicitudes.component';
@@ -181,7 +181,9 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     CrearBancos,
     SidenavComponent,
     EditarAcercamientos,
-    EliminarAcercamientos
+    EliminarAcercamientos,
+    EditarProducto,
+    EliminarProducto
   ],
   imports: [
     BrowserModule,
@@ -250,7 +252,9 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     CrearBancos,
     EditarAcercamientos,
     EliminarAcercamientos,
-    HomeComponent
+    HomeComponent,
+    EditarProducto,
+    EliminarProducto
   ],
   providers: [],
   bootstrap: [AppComponent]
